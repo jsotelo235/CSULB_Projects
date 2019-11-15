@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/bit_time_counter.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/bit_time_counter.syr" 

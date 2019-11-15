@@ -1,0 +1,5 @@
+verilog work "reg16.v"
+verilog work "dec_3to8.v"
+verilog work "regFile.v"
+verilog work "alu16.v"
+verilog work "integer_datapath.v"

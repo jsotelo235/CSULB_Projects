@@ -1,0 +1,16 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Feb 26 13:24:30 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Clk_In" LOCATE = SITE "E3" LEVEL 1;
+COMP "Step" LOCATE = SITE "P18" LEVEL 1;
+COMP "Q<0>" LOCATE = SITE "V17" LEVEL 1;
+COMP "Q<1>" LOCATE = SITE "U17" LEVEL 1;
+COMP "Q<2>" LOCATE = SITE "U16" LEVEL 1;
+COMP "Reset" LOCATE = SITE "M18" LEVEL 1;
+COMP "M" LOCATE = SITE "R13" LEVEL 1;
+COMP "X" LOCATE = SITE "J15" LEVEL 1;
+COMP "Z" LOCATE = SITE "H17" LEVEL 1;
+SCHEMATIC END;
+

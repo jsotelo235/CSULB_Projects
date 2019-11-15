@@ -1,0 +1,4 @@
+vhdtdtfi -lib work D:/301/Lab2/LabProject2/sequence_detector_101101.v -lang verilog -prj LabProject2 -o sequence_detector_101101.spl -module sequence_detector_101101 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 sequence_detector_101101.spl D:/301/Lab2/LabProject2/sequence_detector_101101.sym 
+vhdtdtfi -lib work D:/301/Lab2/LabProject2/sequence_detector_101101.v -lang verilog -prj LabProject2 -o sequence_detector_101101.spl -module sequence_detector_101101 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 sequence_detector_101101.spl D:/301/Lab2/LabProject2/sequence_detector_101101.sym 

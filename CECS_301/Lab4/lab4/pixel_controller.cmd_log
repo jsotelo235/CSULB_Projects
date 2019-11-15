@@ -1,0 +1,4 @@
+vhdtdtfi -lib work D:/301/Lab4/lab4/pixel_controller.v -lang verilog -prj lab4 -o pixel_controller.spl -module pixel_controller -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 pixel_controller.spl D:/301/Lab4/lab4/pixel_controller.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/pixel_controller.v -lang verilog -prj lab4 -o pixel_controller.spl -module pixel_controller -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 pixel_controller.spl D:/301/Lab4/lab4/pixel_controller.sym 

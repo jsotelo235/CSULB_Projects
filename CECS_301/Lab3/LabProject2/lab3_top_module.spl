@@ -1,0 +1,13 @@
+[Inputs]
+Clk_In
+Reset
+Step
+X
+M
+[Outputs]
+Z
+=Q[2:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel lab3_top_module
+

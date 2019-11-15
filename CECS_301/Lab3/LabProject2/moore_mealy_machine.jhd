@@ -1,0 +1,7 @@
+MODULE moore_mealy_machine
+	SUBMODULE clk_div
+		INSTANCE XLXI_1
+	SUBMODULE one_shot
+		INSTANCE XLXI_2
+	SUBMODULE sequence_detector_101101
+		INSTANCE XLXI_3

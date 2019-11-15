@@ -1,0 +1,4 @@
+vhdtdtfi -lang verilog -prj UART -o D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Shift_Register.tfi -lib work D:/CSULB_Classes/CECS_460/Projects/Project_2/UART//Shift_Register.v -module Shift_Register -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
+vhdtdtfi -lib work D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Shift_Register.v -lang verilog -prj UART -o Shift_Register.spl -module Shift_Register -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Shift_Register.spl D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Shift_Register.sym 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Shift_Register.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Shift_Register.syr" 

@@ -1,0 +1,84 @@
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Core_Logic_ucf.ucf -p xc7a100t-csg324-3 Core_Logic.ngc Core_Logic.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Core_Logic_map.ncd Core_Logic.ngd Core_Logic.pcf 
+par -w -intstyle ise -ol high -mt off Core_Logic_map.ncd Core_Logic.ncd Core_Logic.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Core_Logic.twx Core_Logic.ncd -o Core_Logic.twr Core_Logic.pcf -ucf Core_Logic_ucf.ucf 
+bitgen -intstyle ise -f Core_Logic.ut Core_Logic.ncd 

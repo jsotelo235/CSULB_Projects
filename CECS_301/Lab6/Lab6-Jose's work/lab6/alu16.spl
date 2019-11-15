@@ -1,0 +1,13 @@
+[Inputs]
+=R[15:0]=
+=S[15:0]=
+=Alu_Op[3:0]=
+[Outputs]
+N
+Z
+C
+=Y[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel alu16
+

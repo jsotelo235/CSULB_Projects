@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="UART" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Core_Logic D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Core_Logic.v/tb_top - tramelblaze_top</ClosedNode>
+         <ClosedNode>/Core_Logic D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Core_Logic.v/tb_top - tramelblaze_top/tramelblaze - tramelblaze</ClosedNode>
+         <ClosedNode>/Core_Logic D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Core_Logic.v/uart - UART_Top</ClosedNode>
+         <ClosedNode>/Core_Logic D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Core_Logic.v/uart - UART_Top/receive_engine - Rx_Engine/control_rx - Rx_Engine_Control</ClosedNode>
+         <ClosedNode>/Core_Logic D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Core_Logic.v/uart - UART_Top/receive_engine - Rx_Engine/datapath_rx - Rx_DataPath</ClosedNode>
+         <ClosedNode>/Core_Logic D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Core_Logic.v/uart - UART_Top/transmit_engine - Tx_Engine</ClosedNode>
+         <ClosedNode>/Project3_Full_UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Project3_Full_UART_Top.v/tb_top - tramelblaze_top</ClosedNode>
+         <ClosedNode>/Project3_Full_UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Project3_Full_UART_Top.v/tb_top - tramelblaze_top/tramelblaze - tramelblaze</ClosedNode>
+         <ClosedNode>/Project3_Full_UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Project3_Full_UART_Top.v/uart - UART_Top</ClosedNode>
+         <ClosedNode>/Project3_Full_UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Project3_Full_UART_Top.v/uart - UART_Top/receive_engine - Rx_Engine</ClosedNode>
+         <ClosedNode>/Project3_Full_UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Project3_Full_UART_Top.v/uart - UART_Top/receive_engine - Rx_Engine/control_rx - Rx_Engine_Control</ClosedNode>
+         <ClosedNode>/Project3_Full_UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Project3_Full_UART_Top.v/uart - UART_Top/receive_engine - Rx_Engine/datapath_rx - Rx_DataPath</ClosedNode>
+         <ClosedNode>/Project3_Full_UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Project3_Full_UART_Top.v/uart - UART_Top/transmit_engine - Tx_Engine</ClosedNode>
+         <ClosedNode>/Rx_DataPath D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_DataPath.v</ClosedNode>
+         <ClosedNode>/Rx_Engine D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Engine.v</ClosedNode>
+         <ClosedNode>/Rx_Engine D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Engine.v/rx_datapath - Rx_DataPath</ClosedNode>
+         <ClosedNode>/Rx_Engine_Control D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Engine_Control.v</ClosedNode>
+         <ClosedNode>/Rx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Engine_Top.v</ClosedNode>
+         <ClosedNode>/Rx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Engine_Top.v/rx_control - Rx_Engine_Control</ClosedNode>
+         <ClosedNode>/Rx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Engine_Top.v/rx_datapath - Rx_DataPath</ClosedNode>
+         <ClosedNode>/Tx_Engine D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Tx_Engine.v</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_Top.v/inst_5 - tramelblaze_top</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_Top.v/inst_5 - tramelblaze_top/tramelblaze - tramelblaze</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_Top.v/tb - tramelblaze_top</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_Top.v/tb_top - tramelblaze_top/tramelblaze - tramelblaze</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_Top.v/tx_engine - Tx_Engine</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Tx_Engine_Top.v/inst_2 - Tx_Engine</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Tx_Engine_Top.v/inst_5 - tramelblaze_top</ClosedNode>
+         <ClosedNode>/UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|UART_Top.v</ClosedNode>
+         <ClosedNode>/UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|UART_Top.v/receive_engine - Rx_Engine</ClosedNode>
+         <ClosedNode>/UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|UART_Top.v/receive_engine - Rx_Engine/control_rx - Rx_Engine_Control</ClosedNode>
+         <ClosedNode>/UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|UART_Top.v/transmit_engine - Tx_Engine</ClosedNode>
+         <ClosedNode>/tramelblaze_top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|tramelblaze_top.v</ClosedNode>
+         <ClosedNode>/tramelblaze_top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|tramelblaze_top_sim.v/tramelblaze - tramelblaze</ClosedNode>
+         <ClosedNode>/tramelblaze_top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|tramelblaze_top.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>uart - UART_Top (D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/UART_Top.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000021a000000020000000000000000000000000200000064ffffffff0000008100000003000000020000021a0000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>uart - UART_Top (D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/UART_Top.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000132000000010000000100000000000000000000000064ffffffff000000810000000000000001000001320000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000252000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001860000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>D:\CSULB_Classes\CECS_460\Projects\Project_3_Full_UART\UART\Aiso.v</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000109000000010001000100000000000000000000000064ffffffff000000810000000000000001000001090000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>CORE Generator</ClosedNode>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>View RTL Schematic</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000121000000010000000100000000000000000000000064ffffffff000000810000000000000001000001210000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>View RTL Schematic</CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff0000000000000002000000f90000009501000000050100000002</SourceProcessView>
+   <CurrentView>Behavioral Simulation</CurrentView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Core_Logic D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Core_Logic.v/tb_top - tramelblaze_top</ClosedNode>
+         <ClosedNode>/Parity_Gen_Dec_tf D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Parity_Gen_Dec_tf.v</ClosedNode>
+         <ClosedNode>/Project3_Full_UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Project3_Full_UART_Top.v</ClosedNode>
+         <ClosedNode>/Rx_Engine D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Engine.v</ClosedNode>
+         <ClosedNode>/Rx_Engine_Control_tf D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Engine_Control_tf.v</ClosedNode>
+         <ClosedNode>/Rx_Engine_Control_tf D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Engine_Control_tf.v/uut - Rx_Engine_Control</ClosedNode>
+         <ClosedNode>/Rx_Engine_tf D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Engine_tf.v</ClosedNode>
+         <ClosedNode>/Rx_Engine_tf D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Engine_tf.v/uut - Rx_Engine</ClosedNode>
+         <ClosedNode>/Rx_Engine_tf D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Engine_tf.v/uut - Rx_Engine/control_rx - Rx_Engine_Control</ClosedNode>
+         <ClosedNode>/Rx_FSM_tf D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_FSM_tf.v</ClosedNode>
+         <ClosedNode>/Rx_Remap_tf D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Remap_tf.v</ClosedNode>
+         <ClosedNode>/Rx_Shift_Reg_tf D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_Shift_Reg_tf.v</ClosedNode>
+         <ClosedNode>/Rx_bit_counter_tf D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Rx_bit_counter_tf.v</ClosedNode>
+         <ClosedNode>/Shift_Reg_tb D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Shift_Reg_tb.v</ClosedNode>
+         <ClosedNode>/Shift_Reg_tf D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Shift_Reg_tf.v</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_Top.v</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_Top.v/inst_2 - Tx_Engine</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_Top.v/inst_5 - tramelblaze_top/tramelblaze - tramelblaze</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_Top.v/tb_top - tramelblaze_top</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_Top.v/tx_engine - Tx_Engine</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top_tf D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_Top_tf.v</ClosedNode>
+         <ClosedNode>/Tx_Engine_Top_tf D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_Top_tf.v/uut - Tx_Engine_Top/inst_5 - tramelblaze_top</ClosedNode>
+         <ClosedNode>/Tx_Engine_tf D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|Tx_Engine_tf.v</ClosedNode>
+         <ClosedNode>/Tx_Engine_tf D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|Tx_Engine_tf.v</ClosedNode>
+         <ClosedNode>/UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|UART_Top.v</ClosedNode>
+         <ClosedNode>/UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|UART_Top.v/receive_engine - Rx_Engine</ClosedNode>
+         <ClosedNode>/UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|UART_Top.v/receive_engine - Rx_Engine/control_rx - Rx_Engine_Control</ClosedNode>
+         <ClosedNode>/UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|UART_Top.v/receive_engine - Rx_Engine/datapath_rx - Rx_DataPath</ClosedNode>
+         <ClosedNode>/UART_Top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|UART_Top.v/transmit_engine - Tx_Engine</ClosedNode>
+         <ClosedNode>/UART_Top_tf D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|UART_Top_tf.v</ClosedNode>
+         <ClosedNode>/bit_time_counter_tf D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|bit_time_counter_tf.v</ClosedNode>
+         <ClosedNode>/tramelblaze_top D:|CSULB_Classes|CECS_460|Projects|Project_2|UART|tramelblaze_top_sim.v</ClosedNode>
+         <ClosedNode>/tramelblaze_top D:|CSULB_Classes|CECS_460|Projects|Project_3_Full_UART|UART|tramelblaze_top.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Rx_Engine_tf (D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Rx_Engine_tf.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >10</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000128000000020000000000000000000000000200000064ffffffff000000810000000300000002000001280000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>Rx_Engine_tf (D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Rx_Engine_tf.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Design Utilities</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000132000000010000000100000000000000000000000064ffffffff000000810000000000000001000001320000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Design Utilities</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000132000000010000000100000000000000000000000064ffffffff000000810000000000000001000001320000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" />
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>CORE Generator</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000132000000010000000100000000000000000000000064ffffffff000000810000000000000001000001320000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000132000000010000000100000000000000000000000064ffffffff000000810000000000000001000001320000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="ManualCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>D:\CSULB_Classes\CECS_460\Projects\Project_3_Full_UART\UART\PED.v (D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/PED.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002b4000000020000000000000000000000000000000064ffffffff000000810000000000000002000002440000000100000000000000700000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>D:\CSULB_Classes\CECS_460\Projects\Project_3_Full_UART\UART\PED.v (D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/PED.v)</CurrentItem>
+   </ItemView>
+</Project>

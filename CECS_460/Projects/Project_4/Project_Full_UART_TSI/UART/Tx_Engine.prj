@@ -1,0 +1,8 @@
+verilog work "Tx_SR_Flop.v"
+verilog work "Tx_shift_register.v"
+verilog work "Tx_Parity_Gen_Dec.v"
+verilog work "Tx_Load_Reg.v"
+verilog work "Tx_bit_time_counter.v"
+verilog work "Tx_bit_counter.v"
+verilog work "SR_Flop_Txrdy.v"
+verilog work "Tx_Engine.v"

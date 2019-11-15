@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/301/Lab4/lab4/mux8_to_1.v -lang verilog -prj lab4 -o mux8_to_1.spl -module mux8_to_1 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 mux8_to_1.spl D:/301/Lab4/lab4/mux8_to_1.sym 

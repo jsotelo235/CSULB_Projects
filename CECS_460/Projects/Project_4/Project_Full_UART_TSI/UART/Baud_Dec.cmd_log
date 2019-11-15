@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/CSULB_Classes/CECS_460/Projects/Project_4/Project_Full_UART_TSI/UART/Baud_Dec.xst" -ofn "D:/CSULB_Classes/CECS_460/Projects/Project_4/Project_Full_UART_TSI/UART/Baud_Dec.syr" 

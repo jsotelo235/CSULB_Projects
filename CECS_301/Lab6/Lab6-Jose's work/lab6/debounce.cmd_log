@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/301/Lab6/lab6/debounce.v -lang verilog -prj lab6 -o debounce.spl -module debounce -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 debounce.spl D:/301/Lab6/lab6/debounce.sym 

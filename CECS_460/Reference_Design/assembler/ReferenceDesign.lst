@@ -1,0 +1,65 @@
+               ; john tramel
+               ; cecs 360  december 2017
+               ; TramelBlaze Assembly Program Template
+               
+               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+               ; declare constants for coding
+               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+               
+               ZEROS   EQU    0000
+               ONE     EQU    0001
+               FLAG    EQU    R9
+               LEDS    EQU    0123
+               
+               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+               ; startup: initialize the design (reset)
+               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+               
+               START   LOAD   R0,   ZEROS
+0000 AE00 0000
+                       LOAD   R1,   ONE
+0002 AE01 0001
+                       LOAD   FLAG, ZEROS
+0004 AE09 0000
+                       ENINT                ; enable interrupts
+0006 1E00              JUMP   MAIN
+0007 A400 0012
+               
+               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+               ; routines: called routines plus ISR
+               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+               
+               ISR     LOAD   FLAG, ONE
+0009 AE09 0001
+                       RETEN
+000B 4600               
+               SETLED  LOAD   FLAG, ZEROS
+000C AE09 0000
+                       OUTPUT R1,   (LEDS)
+000E B801 0123
+                       RL     R1
+0010 4801
+                       RETURN
+0011 3A00               
+               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+               ; main routine: processor spends most time here
+               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+               
+               MAIN    COMP  FLAG, ONE
+0012 9809 0001
+                       CALLZ SETLED
+0014 9400 000c
+                       JUMP  MAIN 
+0016 A400 0012
+               
+               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+               ; ISR vectored through address 0FFE - must contain JUMP
+               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+               
+                       ADDRESS 0FFE
+               ENDIT   JUMP ISR
+0FFE A400 0009
+               
+                       END
+               
+               

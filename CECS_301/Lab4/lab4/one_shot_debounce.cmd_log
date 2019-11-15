@@ -1,0 +1,4 @@
+vhdtdtfi -lib work D:/301/Lab4/lab4/one_shot_debounce.v -lang verilog -prj lab4 -o one_shot_debounce.spl -module one_shot_debounce -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 one_shot_debounce.spl D:/301/Lab4/lab4/one_shot_debounce.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/one_shot_debounce.v -lang verilog -prj lab4 -o one_shot_debounce.spl -module one_shot_debounce -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 one_shot_debounce.spl D:/301/Lab4/lab4/one_shot_debounce.sym 

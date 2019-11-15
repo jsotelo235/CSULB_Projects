@@ -1,0 +1,70 @@
+vhdtdtfi -lib work D:/301/Lab4/lab4/lab4_top_module.v -lang verilog -prj lab4 -o lab4_top_module.spl -module lab4_top_module -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 lab4_top_module.spl D:/301/Lab4/lab4/lab4_top_module.sym 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc lab4.ucf -p xc7a100t-csg324-3 lab4_top_module.ngc lab4_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab4_top_module_map.ncd lab4_top_module.ngd lab4_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab4_top_module_map.ncd lab4_top_module.ncd lab4_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab4_top_module.twx lab4_top_module.ncd -o lab4_top_module.twr lab4_top_module.pcf -ucf lab4.ucf 
+bitgen -intstyle ise -f lab4_top_module.ut lab4_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc lab4.ucf -p xc7a100t-csg324-3 lab4_top_module.ngc lab4_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab4_top_module_map.ncd lab4_top_module.ngd lab4_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab4_top_module_map.ncd lab4_top_module.ncd lab4_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab4_top_module.twx lab4_top_module.ncd -o lab4_top_module.twr lab4_top_module.pcf -ucf lab4.ucf 
+bitgen -intstyle ise -f lab4_top_module.ut lab4_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc lab4.ucf -p xc7a100t-csg324-3 lab4_top_module.ngc lab4_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab4_top_module_map.ncd lab4_top_module.ngd lab4_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab4_top_module_map.ncd lab4_top_module.ncd lab4_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab4_top_module.twx lab4_top_module.ncd -o lab4_top_module.twr lab4_top_module.pcf -ucf lab4.ucf 
+bitgen -intstyle ise -f lab4_top_module.ut lab4_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc lab4.ucf -p xc7a100t-csg324-3 lab4_top_module.ngc lab4_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab4_top_module_map.ncd lab4_top_module.ngd lab4_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab4_top_module_map.ncd lab4_top_module.ncd lab4_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab4_top_module.twx lab4_top_module.ncd -o lab4_top_module.twr lab4_top_module.pcf -ucf lab4.ucf 
+bitgen -intstyle ise -f lab4_top_module.ut lab4_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc lab4.ucf -p xc7a100t-csg324-3 lab4_top_module.ngc lab4_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab4_top_module_map.ncd lab4_top_module.ngd lab4_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab4_top_module_map.ncd lab4_top_module.ncd lab4_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab4_top_module.twx lab4_top_module.ncd -o lab4_top_module.twr lab4_top_module.pcf -ucf lab4.ucf 
+bitgen -intstyle ise -f lab4_top_module.ut lab4_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc lab4.ucf -p xc7a100t-csg324-3 lab4_top_module.ngc lab4_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab4_top_module_map.ncd lab4_top_module.ngd lab4_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab4_top_module_map.ncd lab4_top_module.ncd lab4_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab4_top_module.twx lab4_top_module.ncd -o lab4_top_module.twr lab4_top_module.pcf -ucf lab4.ucf 
+bitgen -intstyle ise -f lab4_top_module.ut lab4_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc lab4.ucf -p xc7a100t-csg324-3 lab4_top_module.ngc lab4_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab4_top_module_map.ncd lab4_top_module.ngd lab4_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab4_top_module_map.ncd lab4_top_module.ncd lab4_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab4_top_module.twx lab4_top_module.ncd -o lab4_top_module.twr lab4_top_module.pcf -ucf lab4.ucf 
+bitgen -intstyle ise -f lab4_top_module.ut lab4_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc lab4.ucf -p xc7a100t-csg324-3 lab4_top_module.ngc lab4_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab4_top_module_map.ncd lab4_top_module.ngd lab4_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab4_top_module_map.ncd lab4_top_module.ncd lab4_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab4_top_module.twx lab4_top_module.ncd -o lab4_top_module.twr lab4_top_module.pcf -ucf lab4.ucf 
+bitgen -intstyle ise -f lab4_top_module.ut lab4_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/lab4_top_module.xst" -ofn "D:/301/Lab4/lab4/lab4_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc lab4.ucf -p xc7a100t-csg324-3 lab4_top_module.ngc lab4_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab4_top_module_map.ncd lab4_top_module.ngd lab4_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab4_top_module_map.ncd lab4_top_module.ncd lab4_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab4_top_module.twx lab4_top_module.ncd -o lab4_top_module.twr lab4_top_module.pcf -ucf lab4.ucf 
+bitgen -intstyle ise -f lab4_top_module.ut lab4_top_module.ncd 

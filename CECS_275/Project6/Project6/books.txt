@@ -1,0 +1,8 @@
+0 Thunderball	245		Spy
+0 Larceny		289		Mystery
+1 Airplanes		456		Aviation 250
+0 Killer		198		Drama
+1 Football		434		Sports 400
+1 Lincoln		432		History 307
+2 Dictionary	987
+2 Atlas			414

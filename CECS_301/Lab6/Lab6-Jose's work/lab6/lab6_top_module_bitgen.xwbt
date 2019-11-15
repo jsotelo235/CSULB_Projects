@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\301\Lab6\Lab6-Jose's work\lab6\lab6_top_module.ncd
+OUTFILE=D:\301\Lab6\Lab6-Jose's work\lab6\lab6_top_module.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=D:\301\Lab6\Lab6-Jose's work\lab6
+LICENSE=WebPack
+USER_INFO=211097700_0_0_716

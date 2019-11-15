@@ -1,0 +1,7 @@
+verilog work "ipcore_dir/stack_ram.v"
+verilog work "ipcore_dir/scratch_ram.v"
+verilog work "../tramelblaze4.0.v"
+verilog work "../tramelblaze_top_sim.v"
+verilog work "../ReferenceDesign.v"
+verilog work "ReferenceDesign_tf.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

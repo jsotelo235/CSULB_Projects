@@ -1,0 +1,4 @@
+vhdtdtfi -lib work D:/301/Lab5/Lab5_1/lab5_1/display_controller.v -lang verilog -prj lab5_1 -o display_controller.spl -module display_controller -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 display_controller.spl D:/301/Lab5/Lab5_1/lab5_1/display_controller.sym 
+xst -intstyle ise -ifn "D:/CSULB_Classes/301/Lab5/Lab5_1/lab5_1/display_controller.xst" -ofn "D:/CSULB_Classes/301/Lab5/Lab5_1/lab5_1/display_controller.syr" 
+xst -intstyle ise -ifn "D:/CSULB_Classes/301/Lab5/Lab5_1/lab5_1/display_controller.xst" -ofn "D:/CSULB_Classes/301/Lab5/Lab5_1/lab5_1/display_controller.syr" 

@@ -1,0 +1,455 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: bit_time_counter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "bit_time_counter.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "bit_time_counter"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : bit_time_counter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\CSULB_Classes\CECS_460\Projects\Project_2\UART\bit_time_counter.v" into library work
+Parsing module <bit_time_counter>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <bit_time_counter>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <bit_time_counter>.
+    Related source file is "D:\CSULB_Classes\CECS_460\Projects\Project_2\UART\bit_time_counter.v".
+    Found 19-bit register for signal <bit_time_count>.
+    Found 19-bit adder for signal <bit_time_count[18]_GND_1_o_add_0_OUT> created at line 42.
+    Found 19-bit comparator equal for signal <btu> created at line 78
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <bit_time_counter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 19-bit adder                                          : 1
+# Registers                                            : 1
+ 19-bit register                                       : 1
+# Comparators                                          : 1
+ 19-bit comparator equal                               : 1
+# Multiplexers                                         : 1
+ 19-bit 2-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <bit_time_counter>.
+The following registers are absorbed into counter <bit_time_count>: 1 register on signal <bit_time_count>.
+Unit <bit_time_counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 19-bit up counter                                     : 1
+# Comparators                                          : 1
+ 19-bit comparator equal                               : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <bit_time_counter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block bit_time_counter, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : bit_time_counter.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 90
+#      GND                         : 1
+#      LUT2                        : 1
+#      LUT3                        : 22
+#      LUT4                        : 14
+#      LUT5                        : 2
+#      LUT6                        : 5
+#      MUXCY                       : 25
+#      VCC                         : 1
+#      XORCY                       : 19
+# FlipFlops/Latches                : 19
+#      FDC                         : 19
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 8
+#      IBUF                        : 7
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              19  out of  126800     0%  
+ Number of Slice LUTs:                   44  out of  63400     0%  
+    Number used as Logic:                44  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     44
+   Number with an unused Flip Flop:      25  out of     44    56%  
+   Number with an unused LUT:             0  out of     44     0%  
+   Number of fully used LUT-FF pairs:    19  out of     44    43%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    210     4%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 19    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 1.880ns (Maximum Frequency: 532.056MHz)
+   Minimum input arrival time before clock: 1.819ns
+   Maximum output required time after clock: 2.156ns
+   Maximum combinational path delay: 2.513ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.880ns (frequency: 532.056MHz)
+  Total number of paths / destination ports: 190 / 19
+-------------------------------------------------------------------------
+Delay:               1.880ns (Levels of Logic = 20)
+  Source:            bit_time_count_0 (FF)
+  Destination:       bit_time_count_18 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: bit_time_count_0 to bit_time_count_18
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.361   0.299  bit_time_count_0 (bit_time_count_0)
+     LUT3:I2->O            1   0.097   0.000  Mcount_bit_time_count_lut<0> (Mcount_bit_time_count_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Mcount_bit_time_count_cy<0> (Mcount_bit_time_count_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<1> (Mcount_bit_time_count_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<2> (Mcount_bit_time_count_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<3> (Mcount_bit_time_count_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<4> (Mcount_bit_time_count_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<5> (Mcount_bit_time_count_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<6> (Mcount_bit_time_count_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<7> (Mcount_bit_time_count_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<8> (Mcount_bit_time_count_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<9> (Mcount_bit_time_count_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<10> (Mcount_bit_time_count_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<11> (Mcount_bit_time_count_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<12> (Mcount_bit_time_count_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<13> (Mcount_bit_time_count_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<14> (Mcount_bit_time_count_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<15> (Mcount_bit_time_count_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<16> (Mcount_bit_time_count_cy<16>)
+     MUXCY:CI->O           0   0.023   0.000  Mcount_bit_time_count_cy<17> (Mcount_bit_time_count_cy<17>)
+     XORCY:CI->O           1   0.370   0.000  Mcount_bit_time_count_xor<18> (Mcount_bit_time_count18)
+     FDC:D                     0.008          bit_time_count_18
+    ----------------------------------------
+    Total                      1.880ns (1.580ns logic, 0.299ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 437 / 38
+-------------------------------------------------------------------------
+Offset:              1.819ns (Levels of Logic = 21)
+  Source:            sel<0> (PAD)
+  Destination:       bit_time_count_18 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sel<0> to bit_time_count_18
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            20   0.001   0.599  sel_0_IBUF (sel_0_IBUF)
+     LUT3:I0->O            1   0.097   0.000  Mcount_bit_time_count_lut<0> (Mcount_bit_time_count_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Mcount_bit_time_count_cy<0> (Mcount_bit_time_count_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<1> (Mcount_bit_time_count_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<2> (Mcount_bit_time_count_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<3> (Mcount_bit_time_count_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<4> (Mcount_bit_time_count_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<5> (Mcount_bit_time_count_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<6> (Mcount_bit_time_count_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<7> (Mcount_bit_time_count_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<8> (Mcount_bit_time_count_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<9> (Mcount_bit_time_count_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<10> (Mcount_bit_time_count_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<11> (Mcount_bit_time_count_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<12> (Mcount_bit_time_count_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<13> (Mcount_bit_time_count_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<14> (Mcount_bit_time_count_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<15> (Mcount_bit_time_count_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  Mcount_bit_time_count_cy<16> (Mcount_bit_time_count_cy<16>)
+     MUXCY:CI->O           0   0.023   0.000  Mcount_bit_time_count_cy<17> (Mcount_bit_time_count_cy<17>)
+     XORCY:CI->O           1   0.370   0.000  Mcount_bit_time_count_xor<18> (Mcount_bit_time_count18)
+     FDC:D                     0.008          bit_time_count_18
+    ----------------------------------------
+    Total                      1.819ns (1.220ns logic, 0.599ns route)
+                                       (67.1% logic, 32.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 19 / 1
+-------------------------------------------------------------------------
+Offset:              2.156ns (Levels of Logic = 9)
+  Source:            bit_time_count_0 (FF)
+  Destination:       btu (PAD)
+  Source Clock:      clk rising
+
+  Data Path: bit_time_count_0 to btu
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.361   0.697  bit_time_count_0 (bit_time_count_0)
+     LUT6:I0->O            1   0.097   0.000  Mcompar_btu_lut<0> (Mcompar_btu_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Mcompar_btu_cy<0> (Mcompar_btu_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_btu_cy<1> (Mcompar_btu_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_btu_cy<2> (Mcompar_btu_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_btu_cy<3> (Mcompar_btu_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_btu_cy<4> (Mcompar_btu_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_btu_cy<5> (Mcompar_btu_cy<5>)
+     MUXCY:CI->O           1   0.253   0.279  Mcompar_btu_cy<6> (btu_OBUF)
+     OBUF:I->O                 0.000          btu_OBUF (btu)
+    ----------------------------------------
+    Total                      2.156ns (1.179ns logic, 0.977ns route)
+                                       (54.7% logic, 45.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 69 / 1
+-------------------------------------------------------------------------
+Delay:               2.513ns (Levels of Logic = 11)
+  Source:            baud<2> (PAD)
+  Destination:       btu (PAD)
+
+  Data Path: baud<2> to btu
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   0.001   0.635  baud_2_IBUF (baud_2_IBUF)
+     LUT4:I0->O            1   0.097   0.683  baud_count<19>1 (baud_count<0>)
+     LUT6:I1->O            1   0.097   0.000  Mcompar_btu_lut<0> (Mcompar_btu_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Mcompar_btu_cy<0> (Mcompar_btu_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_btu_cy<1> (Mcompar_btu_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_btu_cy<2> (Mcompar_btu_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_btu_cy<3> (Mcompar_btu_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_btu_cy<4> (Mcompar_btu_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Mcompar_btu_cy<5> (Mcompar_btu_cy<5>)
+     MUXCY:CI->O           1   0.253   0.279  Mcompar_btu_cy<6> (btu_OBUF)
+     OBUF:I->O                 0.000          btu_OBUF (btu)
+    ----------------------------------------
+    Total                      2.513ns (0.916ns logic, 1.597ns route)
+                                       (36.4% logic, 63.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.880|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.46 secs
+ 
+--> 
+
+Total memory usage is 4639116 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

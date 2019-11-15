@@ -1,0 +1,20 @@
+[Inputs]
+Clk
+Reset
+W_En
+S_Sel
+=W_Adr[3:0]=
+=S_Adr[3:0]=
+=R_Adr[3:0]=
+=DS[15:0]=
+=ALU_OP[3:0]=
+[Outputs]
+C
+N
+Z
+=Reg_Out[15:0]=
+=Alu_Out[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel integer_datapath
+

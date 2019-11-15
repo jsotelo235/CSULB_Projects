@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/301/Lab4/lab4/clk_divider.v -lang verilog -prj lab4 -o clk_div.spl -module clk_div -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 clk_div.spl D:/301/Lab4/lab4/clk_div.sym 

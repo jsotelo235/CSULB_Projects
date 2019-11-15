@@ -1,0 +1,60 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Apr 29 10:46:05 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "C" LOCATE = SITE "H17" LEVEL 1;
+COMP "N" LOCATE = SITE "K15" LEVEL 1;
+COMP "Z" LOCATE = SITE "J13" LEVEL 1;
+COMP "a" LOCATE = SITE "T10" LEVEL 1;
+COMP "b" LOCATE = SITE "R10" LEVEL 1;
+COMP "c" LOCATE = SITE "K16" LEVEL 1;
+COMP "d" LOCATE = SITE "K13" LEVEL 1;
+COMP "e" LOCATE = SITE "P15" LEVEL 1;
+COMP "f" LOCATE = SITE "T11" LEVEL 1;
+COMP "g" LOCATE = SITE "L18" LEVEL 1;
+COMP "reset" LOCATE = SITE "M18" LEVEL 1;
+COMP "Anodes<2>" LOCATE = SITE "T9" LEVEL 1;
+COMP "Anodes<1>" LOCATE = SITE "J18" LEVEL 1;
+COMP "Anodes<4>" LOCATE = SITE "P14" LEVEL 1;
+COMP "Anodes<3>" LOCATE = SITE "J14" LEVEL 1;
+COMP "Anodes<0>" LOCATE = SITE "J17" LEVEL 1;
+COMP "Anodes<6>" LOCATE = SITE "K2" LEVEL 1;
+COMP "Anodes<5>" LOCATE = SITE "T14" LEVEL 1;
+COMP "Anodes<7>" LOCATE = SITE "U13" LEVEL 1;
+COMP "clk_100mhz" LOCATE = SITE "E3" LEVEL 1;
+COMP "mem_w_en" LOCATE = SITE "P17" LEVEL 1;
+COMP "step_clk" LOCATE = SITE "P18" LEVEL 1;
+COMP "SW<0>" LOCATE = SITE "J15" LEVEL 1;
+COMP "SW<1>" LOCATE = SITE "L16" LEVEL 1;
+COMP "SW<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "SW<3>" LOCATE = SITE "R15" LEVEL 1;
+COMP "SW<4>" LOCATE = SITE "R17" LEVEL 1;
+COMP "SW<5>" LOCATE = SITE "T18" LEVEL 1;
+PIN
+        r1/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>
+        = BEL
+        "r1/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKARDCLK;
+PIN
+        r1/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>
+        = BEL
+        "r1/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKBWRCLK;
+TIMEGRP sys_clk_pin = BEL "clkDiv/i_16" BEL "clkDiv/i_15" BEL "clkDiv/i_14"
+        BEL "clkDiv/i_13" BEL "clkDiv/i_12" BEL "clkDiv/i_11" BEL
+        "clkDiv/i_10" BEL "clkDiv/i_9" BEL "clkDiv/i_8" BEL "clkDiv/i_7" BEL
+        "clkDiv/i_6" BEL "clkDiv/i_5" BEL "clkDiv/i_4" BEL "clkDiv/i_3" BEL
+        "clkDiv/i_2" BEL "clkDiv/i_1" BEL "clkDiv/i_0" BEL "dp/pix_clk/i_16"
+        BEL "dp/pix_clk/i_15" BEL "dp/pix_clk/i_14" BEL "dp/pix_clk/i_13" BEL
+        "dp/pix_clk/i_12" BEL "dp/pix_clk/i_11" BEL "dp/pix_clk/i_10" BEL
+        "dp/pix_clk/i_9" BEL "dp/pix_clk/i_8" BEL "dp/pix_clk/i_7" BEL
+        "dp/pix_clk/i_6" BEL "dp/pix_clk/i_5" BEL "dp/pix_clk/i_4" BEL
+        "dp/pix_clk/i_3" BEL "dp/pix_clk/i_2" BEL "dp/pix_clk/i_1" BEL
+        "dp/pix_clk/i_0" BEL "clkDiv/clk_out" BEL "dp/pix_clk/clk_out" BEL
+        "clk_100mhz_BUFGP/BUFG" PIN
+        "r1/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>"
+        PIN
+        "r1/dut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>";
+SCHEMATIC END;
+

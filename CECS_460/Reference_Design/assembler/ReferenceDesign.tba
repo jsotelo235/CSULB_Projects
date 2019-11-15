@@ -1,0 +1,53 @@
+; john tramel
+; cecs 360  december 2017
+; TramelBlaze Assembly Program Template
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; declare constants for coding
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+ZEROS   EQU    0000
+ONE     EQU    0001
+FLAG    EQU    R9
+LEDS    EQU    0123
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; startup: initialize the design (reset)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+START   LOAD   R0,   ZEROS
+        LOAD   R1,   ONE
+        LOAD   FLAG, ZEROS
+        ENINT                ; enable interrupts
+        JUMP   MAIN
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; routines: called routines plus ISR
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+ISR     LOAD   FLAG, ONE
+        RETEN
+
+SETLED  LOAD   FLAG, ZEROS
+        OUTPUT R1,   (LEDS)
+        RL     R1
+        RETURN
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; main routine: processor spends most time here
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+MAIN    COMP  FLAG, ONE
+        CALLZ SETLED
+        JUMP  MAIN 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; ISR vectored through address 0FFE - must contain JUMP
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+        ADDRESS 0FFE
+ENDIT   JUMP ISR
+
+        END
+
+

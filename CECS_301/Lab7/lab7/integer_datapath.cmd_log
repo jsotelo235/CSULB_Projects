@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "D:/301/Lab7/lab7/integer_datapath.xst" -ofn "D:/301/Lab7/lab7/integer_datapath.syr" 
+vhdtdtfi -lib work D:/301/Lab7/lab7/integer_datapath.v -lang verilog -prj lab7 -o integer_datapath.spl -module integer_datapath -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 integer_datapath.spl D:/301/Lab7/lab7/integer_datapath.sym 

@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/301/Lab7/lab7/cpu_eu.v -lang verilog -prj lab7 -o cpu_eu.spl -module cpu_eu -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 cpu_eu.spl D:/301/Lab7/lab7/cpu_eu.sym 

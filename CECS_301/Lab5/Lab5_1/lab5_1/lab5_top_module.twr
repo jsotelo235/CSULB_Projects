@@ -1,0 +1,131 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml lab5_top_module.twx lab5_top_module.ncd -o
+lab5_top_module.twr lab5_top_module.pcf -ucf lab_tb.ucf
+
+Design file:              lab5_top_module.ncd
+Physical constraint file: lab5_top_module.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clock_100mhz
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+reset       |    0.507(R)|      FAST  |    1.927(R)|      SLOW  |clock_100mhz_BUFGP|   0.000|
+sw<0>       |    0.105(R)|      FAST  |    1.949(R)|      SLOW  |clock_100mhz_BUFGP|   0.000|
+sw<1>       |    0.179(R)|      FAST  |    1.951(R)|      SLOW  |clock_100mhz_BUFGP|   0.000|
+sw<2>       |    0.013(R)|      FAST  |    2.137(R)|      SLOW  |clock_100mhz_BUFGP|   0.000|
+sw<3>       |    0.023(R)|      FAST  |    2.109(R)|      SLOW  |clock_100mhz_BUFGP|   0.000|
+sw<4>       |    0.570(R)|      FAST  |    1.593(R)|      SLOW  |clock_100mhz_BUFGP|   0.000|
+sw<5>       |    0.321(R)|      FAST  |    1.768(R)|      SLOW  |clock_100mhz_BUFGP|   0.000|
+sw<6>       |    0.696(R)|      FAST  |    1.211(R)|      SLOW  |clock_100mhz_BUFGP|   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clock_100mhz to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+a           |        14.105(R)|      SLOW  |         4.651(R)|      FAST  |clock_100mhz_BUFGP|   0.000|
+b           |        14.031(R)|      SLOW  |         4.686(R)|      FAST  |clock_100mhz_BUFGP|   0.000|
+c           |        14.043(R)|      SLOW  |         4.416(R)|      FAST  |clock_100mhz_BUFGP|   0.000|
+d           |        14.160(R)|      SLOW  |         4.679(R)|      FAST  |clock_100mhz_BUFGP|   0.000|
+e           |        13.432(R)|      SLOW  |         4.298(R)|      FAST  |clock_100mhz_BUFGP|   0.000|
+f           |        13.748(R)|      SLOW  |         4.315(R)|      FAST  |clock_100mhz_BUFGP|   0.000|
+g           |        13.551(R)|      SLOW  |         4.363(R)|      FAST  |clock_100mhz_BUFGP|   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clock_100mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock_100mhz   |    3.782|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+sw<10>         |a              |   10.947|
+sw<10>         |b              |   11.140|
+sw<10>         |c              |   10.857|
+sw<10>         |d              |   10.988|
+sw<10>         |e              |   10.276|
+sw<10>         |f              |   10.562|
+sw<10>         |g              |   10.381|
+sw<11>         |a              |   11.256|
+sw<11>         |b              |   11.449|
+sw<11>         |c              |   11.166|
+sw<11>         |d              |   11.297|
+sw<11>         |e              |   10.585|
+sw<11>         |f              |   10.871|
+sw<11>         |g              |   10.690|
+sw<12>         |a              |   11.960|
+sw<12>         |b              |   12.153|
+sw<12>         |c              |   11.870|
+sw<12>         |d              |   12.001|
+sw<12>         |e              |   11.289|
+sw<12>         |f              |   11.575|
+sw<12>         |g              |   11.394|
+sw<13>         |a              |   10.482|
+sw<13>         |b              |   10.408|
+sw<13>         |c              |   10.420|
+sw<13>         |d              |   10.537|
+sw<13>         |e              |    9.809|
+sw<13>         |f              |   10.125|
+sw<13>         |g              |    9.928|
+sw<14>         |a              |   11.581|
+sw<14>         |b              |   11.507|
+sw<14>         |c              |   11.519|
+sw<14>         |d              |   11.636|
+sw<14>         |e              |   10.908|
+sw<14>         |f              |   11.224|
+sw<14>         |g              |   11.027|
+sw<15>         |a              |   11.518|
+sw<15>         |b              |   11.444|
+sw<15>         |c              |   11.456|
+sw<15>         |d              |   11.573|
+sw<15>         |e              |   10.845|
+sw<15>         |f              |   11.161|
+sw<15>         |g              |   10.964|
+---------------+---------------+---------+
+
+
+Analysis completed Sat Mar 25 17:55:27 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 671 MB
+
+
+

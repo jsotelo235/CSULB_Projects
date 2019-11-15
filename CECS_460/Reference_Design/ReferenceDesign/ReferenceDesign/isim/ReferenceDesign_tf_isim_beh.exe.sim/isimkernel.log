@@ -1,0 +1,36 @@
+Command line:
+   ReferenceDesign_tf_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50369
+
+Thu Dec 07 12:39:10 2017
+
+
+ Elaboration Time: 0.171875 sec
+
+ Current Memory Usage: 1504.95 Meg
+
+ Total Signals          : 359
+ Total Nets             : 1220
+ Total Signal Drivers   : 156
+ Total Blocks           : 39
+ Total Primitive Blocks : 29
+ Total Processes        : 206
+ Total Traceable Variables  : 834
+ Total Scalar Nets and Variables : 115010
+Total Line Count : 1457
+Total Line Count : 1457
+Total Line Count : 1457
+Total Line Count : 1457
+Total Line Count : 1457
+Total Line Count : 1457
+Total Line Count : 1457
+Total Line Count : 1457
+
+ Total Simulation Time: 496.922 sec
+
+ Current Memory Usage: 561.197 Meg
+
+Thu Dec 07 13:47:18 2017
+

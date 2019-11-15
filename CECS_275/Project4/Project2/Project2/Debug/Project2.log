@@ -1,0 +1,14 @@
+﻿  program2_structs_scantron.cpp
+d:\cecs 275\project4\project2\project2\program2_structs_scantron.cpp(54): error C3867: 'Class::setStudents': non-standard syntax; use '&' to create a pointer to member
+d:\cecs 275\project4\project2\project2\program2_structs_scantron.cpp(54): error C2109: subscript requires array or pointer type
+d:\cecs 275\project4\project2\project2\program2_structs_scantron.cpp(54): error C2228: left of '.studentID' must have class/struct/union
+d:\cecs 275\project4\project2\project2\program2_structs_scantron.cpp(56): error C2659: '=': function as left operand
+  Student.cpp
+  Class.cpp
+d:\cecs 275\project4\project2\project2\class.cpp(30): error C2561: 'Class::getStudents': function must return a value
+  d:\cecs 275\project4\project2\project2\class.cpp(28): note: see declaration of 'Class::getStudents'
+d:\cecs 275\project4\project2\project2\class.cpp(70): error C2659: '=': function as left operand
+d:\cecs 275\project4\project2\project2\class.cpp(71): error C2659: '=': function as left operand
+d:\cecs 275\project4\project2\project2\class.cpp(73): error C2659: '=': function as left operand
+d:\cecs 275\project4\project2\project2\class.cpp(74): error C2659: '=': function as left operand
+  Generating Code...

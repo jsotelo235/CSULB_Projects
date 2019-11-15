@@ -1,0 +1,29 @@
+Command line:
+   sequence_detector_overlap_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  49790
+
+Thu Mar 02 13:38:38 2017
+
+
+ Elaboration Time: 0.09375 sec
+
+ Current Memory Usage: 846.082 Meg
+
+ Total Signals          : 49
+ Total Nets             : 35
+ Total Signal Drivers   : 25
+ Total Blocks           : 9
+ Total Primitive Blocks : 7
+ Total Processes        : 33
+ Total Traceable Variables  : 30
+ Total Scalar Nets and Variables : 201
+Total Line Count : 70
+
+ Total Simulation Time: 0.109375 sec
+
+ Current Memory Usage: 688.796 Meg
+
+Thu Mar 02 13:40:28 2017
+

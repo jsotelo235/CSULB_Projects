@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Mar  7 04:22:45 2019
+# Process ID: 12988
+# Current directory: D:/CSULB_Classes/CECS_460/Projects/Project_2/UART
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14004 D:\CSULB_Classes\CECS_460\Projects\Project_2\UART\Tx_Engine_tf_isim_beh.wdb
+# Log file: D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/vivado.log
+# Journal file: D:/CSULB_Classes/CECS_460/Projects/Project_2/UART\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_wave_database {D:\CSULB_Classes\CECS_460\Projects\Project_2\UART\Tx_Engine_tf_isim_beh.wdb}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_301/Lab6/Lab6-Jose&apos;s work/lab6/alu16.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_301/Lab6/Lab6-Jose&apos;s work/lab6/debounce.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_301/Lab6/Lab6-Jose&apos;s work/lab6/dec_3to8.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_301/Lab6/Lab6-Jose&apos;s work/lab6/display_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_301/Lab6/Lab6-Jose&apos;s work/lab6/hex_to_7seg.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_301/Lab6/Lab6-Jose&apos;s work/lab6/integer_datapath.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_301/Lab6/Lab6-Jose&apos;s work/lab6/lab6_top_module.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_301/Lab6/Lab6-Jose&apos;s work/lab6/mux_8to1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_301/Lab6/Lab6-Jose&apos;s work/lab6/pixel_clk.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_301/Lab6/Lab6-Jose&apos;s work/lab6/pixel_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_301/Lab6/Lab6-Jose&apos;s work/lab6/reg16.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_301/Lab6/Lab6-Jose&apos;s work/lab6/regFile.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

@@ -1,0 +1,10 @@
+[Inputs]
+Sel_in
+=S_in[15:0]=
+=DS_in[15:0]=
+[Outputs]
+S_mux_out
+[BiDir]
+[ATTRIBUTES]
+VeriModel s_mux
+

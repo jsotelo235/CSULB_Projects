@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Aiso.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Baud_Dec.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Core_Logic.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/PED.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Rx_DataPath.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Rx_Engine.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Rx_Engine_Control.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Rx_FSM.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Rx_Remap.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Rx_SR_Flop.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Rx_Shift_Reg.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Rx_bit_counter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Rx_bit_time_counter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/SR_Flop.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/SR_Flop_Txrdy.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Tx_Engine.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Tx_Load_Reg.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Tx_Parity_Gen_Dec.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Tx_SR_Flop.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Tx_bit_counter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Tx_bit_time_counter.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/Tx_shift_register.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/UART_Top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/tramelblaze.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;D:/CSULB_Classes/CECS_460/Projects/Project_3_Full_UART/UART/tramelblaze_top.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

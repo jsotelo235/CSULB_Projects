@@ -1,0 +1,12 @@
+[Inputs]
+clk
+reset
+X
+M
+[Outputs]
+Z
+=Q[2:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel sequence_detector_101101
+

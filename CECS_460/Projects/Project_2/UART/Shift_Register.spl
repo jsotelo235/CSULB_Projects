@@ -1,0 +1,12 @@
+[Inputs]
+clk
+rst
+load
+shift
+=data_in[10:0]=
+[Outputs]
+sdo
+[BiDir]
+[ATTRIBUTES]
+VeriModel Shift_Register
+

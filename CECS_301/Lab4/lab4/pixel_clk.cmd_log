@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "D:/301/Lab4/lab4/pixel_clk.xst" -ofn "D:/301/Lab4/lab4/pixel_clk.syr" 
+vhdtdtfi -lib work D:/301/Lab4/lab4/pixel_clk.v -lang verilog -prj lab4 -o pixel_clk.spl -module pixel_clk -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 pixel_clk.spl D:/301/Lab4/lab4/pixel_clk.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/pixel_clk.v -lang verilog -prj lab4 -o pixel_clk.spl -module pixel_clk -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 pixel_clk.spl D:/301/Lab4/lab4/pixel_clk.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/pixel_clk.v -lang verilog -prj lab4 -o pixel_clk.spl -module pixel_clk -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 pixel_clk.spl D:/301/Lab4/lab4/pixel_clk.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/pixel_clk.v -lang verilog -prj lab4 -o pixel_clk.spl -module pixel_clk -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 pixel_clk.spl D:/301/Lab4/lab4/pixel_clk.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/pixel_clk.v -lang verilog -prj lab4 -o pixel_clk.spl -module pixel_clk -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 pixel_clk.spl D:/301/Lab4/lab4/pixel_clk.sym 

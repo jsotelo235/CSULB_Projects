@@ -1,0 +1,5 @@
+verilog work "ipcore_dir/stack_ram.v"
+verilog work "ipcore_dir/scratch_ram.v"
+verilog work "tramelblaze.v"
+verilog work "ipcore_dir/tb_rom.v"
+verilog work "tramelblaze_top.v"

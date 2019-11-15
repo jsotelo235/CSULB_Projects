@@ -1,0 +1,4 @@
+vhdtdtfi -lib work D:/301/Lab3/LabProject2/hex_to_7segment.v -lang verilog -prj LabProject2 -o hex_to_7segment.spl -module hex_to_7segment -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 hex_to_7segment.spl D:/301/Lab3/LabProject2/hex_to_7segment.sym 
+vhdtdtfi -lib work D:/301/Lab3/LabProject2/hex_to_7segment.v -lang verilog -prj LabProject2 -o hex_to_7segment.spl -module hex_to_7segment -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 hex_to_7segment.spl D:/301/Lab3/LabProject2/hex_to_7segment.sym 

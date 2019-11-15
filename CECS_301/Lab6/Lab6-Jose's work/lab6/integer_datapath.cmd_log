@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "D:/301/Lab6/lab6/integer_datapath.xst" -ofn "D:/301/Lab6/lab6/integer_datapath.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab6.ucf -p xc7a100t-csg324-3 integer_datapath.ngc integer_datapath.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o integer_datapath_map.ncd integer_datapath.ngd integer_datapath.pcf 
+vhdtdtfi -lib work D:/301/Lab6/lab6/integer_datapath.v -lang verilog -prj lab6 -o integer_datapath.spl -module integer_datapath -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 integer_datapath.spl D:/301/Lab6/lab6/integer_datapath.sym 
+vhdtdtfi -lib work {D:/301/Lab6/Lab6 - Copy/lab6/integer_datapath.v} -lang verilog -prj lab6 -o integer_datapath.spl -module integer_datapath -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 integer_datapath.spl {D:/301/Lab6/Lab6 - Copy/lab6/integer_datapath.sym} 
+vhdtdtfi -lib work {D:/301/Lab6/Lab6 - Copy/lab6/integer_datapath.v} -lang verilog -prj lab6 -o integer_datapath.spl -module integer_datapath -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 integer_datapath.spl {D:/301/Lab6/Lab6 - Copy/lab6/integer_datapath.sym} 
+vhdtdtfi -lib work {D:/301/Lab6/Lab6 - Copy/lab6/integer_datapath.v} -lang verilog -prj lab6 -o integer_datapath.spl -module integer_datapath -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 integer_datapath.spl {D:/301/Lab6/Lab6 - Copy/lab6/integer_datapath.sym} 
+vhdtdtfi -lang verilog -prj lab6 -o "D:/301/Lab6/Lab6 - Copy/lab6/integer_datapath.tfi" -lib work "D:/301/Lab6/Lab6 - Copy/lab6//integer_datapath.v" -module integer_datapath -template C:/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 

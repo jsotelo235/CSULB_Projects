@@ -1,0 +1,28 @@
+Command line:
+   Rx_Engine_tf_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  63312
+
+Fri Mar 22 15:09:24 2019
+
+
+ Elaboration Time: 0.171875 sec
+
+ Current Memory Usage: 5492.54 Meg
+
+ Total Signals          : 107
+ Total Nets             : 110
+ Total Signal Drivers   : 36
+ Total Blocks           : 14
+ Total Primitive Blocks : 10
+ Total Processes        : 53
+ Total Traceable Variables  : 47
+ Total Scalar Nets and Variables : 305
+
+ Total Simulation Time: 0.203125 sec
+
+ Current Memory Usage: 5492.54 Meg
+
+Fri Mar 22 15:09:28 2019
+

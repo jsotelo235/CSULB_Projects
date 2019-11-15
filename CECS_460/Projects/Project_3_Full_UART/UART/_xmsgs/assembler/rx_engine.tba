@@ -1,0 +1,126 @@
+; Jose Sotelo
+; CECS 460 SOC
+; TramelBlaze Assembly Program for full duplex UART
+
+
+;=======================================================
+;	Define Variables Alias
+;=======================================================
+
+
+;=======================================================
+;	Register Alias
+;=======================================================
+
+
+;=======================================================
+;	Start
+;	Startup Code Initialization
+;	only executed at startup (reset)
+;=======================================================
+START
+		ENINT							; Enable Interrupt
+		
+        JUMP   	MAIN
+		
+;=======================================================
+;	Binary to ASCII Routine
+;	All service routines + ISR
+;=======================================================
+		ADDRESS 0100
+BinToASC
+        LOAD   	RE, COUNTER			; Load register RE with contents of register R2 				(RE <- R2)
+		
+		LOAD	RD, 2710			; Load register RD with literal 2710(10000)						(RD <- 2710)
+		CALL	FINDIT				; suspend current execution and branch to the FINDIT routine
+		ADD		RB, 0030			; Add register RB with 0x30										(RB <- RB + 0030)
+		STORE	RB, 0012			; Write register RB to scratchpad RAM location 0x12				(RAM[0012] <- RB)
+		
+		LOAD	RD, 03E8			; Load register RD with 0x3E8(1000)								(RD <- 03E8)
+		CALL	FINDIT				; suspend current execution and branch to the FINDIT routine
+		ADD		RB, 0030			; Add register RB with 0x30										(RB <- RB + 0030)
+		STORE	RB, 0013			; Write register RB to scratchpad RAM location 0x13				(RAM[0013] <- RB)
+		
+		LOAD	RD, 0064			; Load register RD with 0x64									(RD <- 0064)
+		CALL	FINDIT				; suspend current execution and branch to the FINDIT routine
+		ADD		RB, 0030			; Add register RB with 0x30										(RB <- RB + 0030)
+		STORE	RB, 0014			; Write register RB to scratchpad RAM location 0x14				(RAM[0014] <- RB)
+		
+		LOAD	RD, 000A			; Load register RD with 000A(10)								(RD <- 000A)
+		CALL	FINDIT				; suspend current execution and branch to the FINDIT routine
+		ADD		RB, 0030			; Add register RB with 0x30										(RB <- RB + 0030)
+		STORE	RB, 0015			; Write register RB to scratchpad RAM location 0x15				(RAM[0015] <- RB)
+		
+		ADD		RE, 0030			; Add register RE with 0x30										(RE = RE + 0030)
+		STORE	RE, 0016			; Write register RB to scratchpad RAM location 0x16				(RAM[0016] <- RB)
+		
+		RETURN
+		
+;=======================================================
+;	Find It Routine
+;=======================================================
+		ADDRESS 0200				; Directive specifies the subsequent code to be put to a specific address in instruction ROM
+FINDIT
+		LOAD	RB, ZERO			; Load register RB with 0										(RB <- 0000)
+REPEAT	SUB		RE, RD				; Subtract register RD from register RE 						(RE <- RE - RD)
+		JUMPC	FOUNDIT				; Jump if CARRY to FOUNDIT										(if CARRY PC <— FOUNDIT)
+		ADD		RB, 0001			; Add register RB with 1										(RB <- RB + 0001)
+		JUMP	REPEAT				; Unconditionally jump to REPEAT								(PC <- REPEAT)
+FOUNDIT
+		ADD		RE, RD				; ADD register RE with RD										(RE <- RE + RD)
+		
+		RETURN						; Unconditionally return from subroutine						(PC <— TOS + 1)		
+	
+;=======================================================
+;	ISR
+;=======================================================
+		ADDRESS 0300				; Directive specifies the subsequent code to be put to a specific address in instruction ROM
+ISR		
+		FETCH	TEMP, POINTER		; Read scratchpad RAM location 0000 into register R1			(R1 <- RAM[000A])
+		OUTPUT	TEMP, PORT			; Write register R1 to port 0000								(Port(0000) <- R1)
+		ADD		POINTER, 0001		; Add register R3 with 0001 to traverse memory					(R3 <- R3 + 0001)
+		
+		COMP	POINTER, 0012		; Compare register R3 with literal 0012.						(if R2== 0012, then ZERO =1)
+		CALLZ	BinToASC			; If ZERO call subroutine at 0100								(if ZERO TOS <— PC; PC <— 0100)
+		
+		COMP	POINTER, 0020		; Compare register R3 with register 0020						(if R3 < 0020, then ZERO =1)
+		JUMPZ	NEXT_LINE			; Jump if ZERO to NEXT_LINE										(if ZERO PC <— NEXT_LINE)
+		
+		RETEN						; Return from interrupt with interrupts enabled
+		
+NEXT_LINE
+		LOAD	POINTER, ZERO		; Load R3 with 0000												(R3 <- 0000)
+		ADD		COUNTER, 0001		; Add R2 = R2 + 0001											(R2 <- R2 + 1)
+		RETEN						; Return from interrupt with interrupts enabled
+		
+;=======================================================
+;	Main Loop
+;	main loop is where processor spends most of its time
+;=======================================================
+
+MAIN
+		ADD		COUNT_LEDS, 0001
+		ADD		DELAY, ZERO
+		COMP	DELAY, 0200
+		JUMPC	DONE
+		
+		LOAD	COUNT_LEDS, ZERO
+		LOAD	DELAY,		ZERO
+		RL		LEDS
+		
+DONE
+		OUTPUT	LEDS, 0001
+		JUMP	MAIN
+		
+
+		
+;=======================================================
+;	ISR vectored through 0FFE
+;=======================================================
+        ADDRESS 0FFE			; Directive specifies the subsequent code to be put to a specific address in instruction ROM
+		
+ENDIT   JUMP ISR
+
+        END
+
+

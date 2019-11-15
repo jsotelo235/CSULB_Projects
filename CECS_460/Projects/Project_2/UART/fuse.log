@@ -1,0 +1,32 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Tx_Engine_tf_isim_beh.exe -prj D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Tx_Engine_tf_beh.prj work.Tx_Engine_tf work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/SR_Flop_Txrdy.v" into library work
+Analyzing Verilog file "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/SR_Flop.v" into library work
+Analyzing Verilog file "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Shift_Register.v" into library work
+Analyzing Verilog file "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Parity_Gen_Dec.v" into library work
+Analyzing Verilog file "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Load_Reg.v" into library work
+Analyzing Verilog file "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/bit_time_counter.v" into library work
+Analyzing Verilog file "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/bit_counter.v" into library work
+Analyzing Verilog file "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Tx_Engine.v" into library work
+Analyzing Verilog file "D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Tx_Engine_tf.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module SR_Flop_Txrdy
+Compiling module SR_Flop
+Compiling module Load_Reg
+Compiling module Parity_Gen_Dec
+Compiling module Shift_Register
+Compiling module bit_time_counter
+Compiling module bit_counter
+Compiling module Tx_Engine
+Compiling module Tx_Engine_tf
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 10 Verilog Units
+Built simulation executable D:/CSULB_Classes/CECS_460/Projects/Project_2/UART/Tx_Engine_tf_isim_beh.exe
+Fuse Memory Usage: 27428 KB
+Fuse CPU Usage: 1140 ms

@@ -1,0 +1,11 @@
+[Inputs]
+clk
+we
+=addr[7:0]=
+=din[15:0]=
+[Outputs]
+=dout[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel ram1
+

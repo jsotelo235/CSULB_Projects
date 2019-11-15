@@ -1,0 +1,3 @@
+verilog isim_temp "Parity_Gen_Dec.v"
+verilog isim_temp "Parity_Gen_Dec_tf.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

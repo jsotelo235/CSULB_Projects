@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\cecs 275\project7\project7\main.cpp(53): warning C4018: '<': signed/unsigned mismatch
+  Project7.vcxproj -> D:\CECS 275\Project7\Debug\Project7.exe
+  Project7.vcxproj -> D:\CECS 275\Project7\Debug\Project7.pdb (Partial PDB)

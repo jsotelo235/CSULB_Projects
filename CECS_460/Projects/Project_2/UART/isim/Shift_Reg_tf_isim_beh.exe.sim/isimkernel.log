@@ -1,0 +1,30 @@
+Command line:
+   Shift_Reg_tf_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54182
+
+Tue Mar 20 09:08:36 2018
+
+
+ Elaboration Time: 0.09375 sec
+
+ Current Memory Usage: 880.947 Meg
+
+ Total Signals          : 20
+ Total Nets             : 29
+ Total Signal Drivers   : 11
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 15
+ Total Traceable Variables  : 24
+ Total Scalar Nets and Variables : 135
+Total Line Count : 40
+Total Line Count : 40
+
+ Total Simulation Time: 12.5625 sec
+
+ Current Memory Usage: 723.661 Meg
+
+Tue Mar 20 09:09:50 2018
+

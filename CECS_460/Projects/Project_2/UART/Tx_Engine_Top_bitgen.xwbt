@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\CSULB_Classes\CECS_460\Projects\Project_2\UART\Tx_Engine_Top.ncd
+OUTFILE=D:\CSULB_Classes\CECS_460\Projects\Project_2\UART\Tx_Engine_Top.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=D:\CSULB_Classes\CECS_460\Projects\Project_2\UART
+LICENSE=WebPack
+USER_INFO=211097700_0_0_716

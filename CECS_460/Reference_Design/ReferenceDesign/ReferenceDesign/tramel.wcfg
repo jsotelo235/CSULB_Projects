@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/tramel/Documents/XilinxProjects/ReferenceDesign/ReferenceDesign/ReferenceDesign/ReferenceDesign_tf_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="ReferenceDesign_tf" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/ReferenceDesign_tf/uut/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/swin" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">swin</obj_property>
+      <obj_property name="ObjectShortName">swin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/rsts" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rsts</obj_property>
+      <obj_property name="ObjectShortName">rsts</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/db" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">db</obj_property>
+      <obj_property name="ObjectShortName">db</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/tick" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tick</obj_property>
+      <obj_property name="ObjectShortName">tick</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/in_port" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">in_port[15:0]</obj_property>
+      <obj_property name="ObjectShortName">in_port[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/out_port" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">out_port[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_port[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/port_id" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">port_id[15:0]</obj_property>
+      <obj_property name="ObjectShortName">port_id[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/read_strobe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">read_strobe</obj_property>
+      <obj_property name="ObjectShortName">read_strobe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/write_strobe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">write_strobe</obj_property>
+      <obj_property name="ObjectShortName">write_strobe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/ped" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ped</obj_property>
+      <obj_property name="ObjectShortName">ped</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/interrupt" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">interrupt</obj_property>
+      <obj_property name="ObjectShortName">interrupt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/interrupt_ack" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">interrupt_ack</obj_property>
+      <obj_property name="ObjectShortName">interrupt_ack</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/leds" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">leds[15:0]</obj_property>
+      <obj_property name="ObjectShortName">leds[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/rQ" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rQ[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rQ[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/pedQ" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pedQ[1:0]</obj_property>
+      <obj_property name="ObjectShortName">pedQ[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/next" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">next[2:0]</obj_property>
+      <obj_property name="ObjectShortName">next[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/present" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">present[2:0]</obj_property>
+      <obj_property name="ObjectShortName">present[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ReferenceDesign_tf/uut/counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">counter[18:0]</obj_property>
+      <obj_property name="ObjectShortName">counter[18:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

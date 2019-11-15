@@ -1,0 +1,4 @@
+vhdtdtfi -lib work D:/301/Lab6/lab6/s_mux.v -lang verilog -prj lab6 -o s_mux.spl -module s_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 s_mux.spl D:/301/Lab6/lab6/s_mux.sym 
+vhdtdtfi -lib work D:/301/Lab6/lab6/s_mux.v -lang verilog -prj lab6 -o s_mux.spl -module s_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 s_mux.spl D:/301/Lab6/lab6/s_mux.sym 

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\tramel\Documents\XilinxProjects\ReferenceDesign\ReferenceDesign\ReferenceDesign\ReferenceDesign.ncd
+OUTFILE=C:\Users\tramel\Documents\XilinxProjects\ReferenceDesign\ReferenceDesign\ReferenceDesign\ReferenceDesign.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\Users\tramel\Documents\XilinxProjects\ReferenceDesign\ReferenceDesign\ReferenceDesign
+LICENSE=WebPack
+USER_INFO=175150209_203016841_0_552

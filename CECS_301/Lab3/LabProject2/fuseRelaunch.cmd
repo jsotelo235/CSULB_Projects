@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "D:/301/Lab3/LabProject2/sequence_detector_overlap_tb_isim_beh.exe" -prj "D:/301/Lab3/LabProject2/sequence_detector_overlap_tb_beh.prj" "work.sequence_detector_overlap_tb" "work.glbl" 

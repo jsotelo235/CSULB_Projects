@@ -1,0 +1,22 @@
+
+
+
+// Instantiate the module
+integer_datapath instance_name (
+    .Clk(Clk), 
+    .Reset(Reset), 
+    .W_En(W_En), 
+    .W_Adr(W_Adr), 
+    .S_Adr(S_Adr), 
+    .R_Adr(R_Adr), 
+    .DS(DS), 
+    .S_Sel(S_Sel), 
+    .ALU_OP(ALU_OP), 
+    .Reg_Out(Reg_Out), 
+    .Alu_Out(Alu_Out), 
+    .C(C), 
+    .N(N), 
+    .Z(Z)
+    );
+
+

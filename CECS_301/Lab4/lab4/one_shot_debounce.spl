@@ -1,0 +1,10 @@
+[Inputs]
+clk_in
+D_in
+reset
+[Outputs]
+D_out
+[BiDir]
+[ATTRIBUTES]
+VeriModel one_shot_debounce
+

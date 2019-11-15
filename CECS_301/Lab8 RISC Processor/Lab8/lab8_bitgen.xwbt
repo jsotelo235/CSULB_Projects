@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\.Xilinx\Lab8\lab8.ncd
+OUTFILE=E:\.Xilinx\Lab8\lab8.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=E:\.Xilinx\Lab8
+LICENSE=WebPack
+USER_INFO=211234253_0_0_574

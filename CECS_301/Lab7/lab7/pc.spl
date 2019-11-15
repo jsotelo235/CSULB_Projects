@@ -1,0 +1,12 @@
+[Inputs]
+clk
+reset
+ld
+in
+=D[15:0]=
+[Outputs]
+=Q[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel pc
+

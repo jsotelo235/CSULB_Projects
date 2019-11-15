@@ -1,0 +1,179 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml lab6_top_module.twx lab6_top_module.ncd -o
+lab6_top_module.twr lab6_top_module.pcf -ucf lab6.ucf
+
+Design file:              lab6_top_module.ncd
+Physical constraint file: lab6_top_module.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+reset       |    0.334(R)|      FAST  |    2.153(R)|      SLOW  |clk_BUFGP         |   0.000|
+step        |   -0.102(R)|      FAST  |    1.959(R)|      SLOW  |clk_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.240|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+sw<0>          |C              |    9.222|
+sw<0>          |N              |    9.553|
+sw<0>          |Z              |   11.570|
+sw<0>          |a              |   12.646|
+sw<0>          |b              |   12.222|
+sw<0>          |c              |   12.341|
+sw<0>          |d              |   12.618|
+sw<0>          |e              |   11.925|
+sw<0>          |f              |   12.114|
+sw<0>          |g              |   11.946|
+sw<1>          |C              |    8.435|
+sw<1>          |N              |    9.180|
+sw<1>          |Z              |   11.376|
+sw<1>          |a              |   12.538|
+sw<1>          |b              |   11.513|
+sw<1>          |c              |   12.280|
+sw<1>          |d              |   12.518|
+sw<1>          |e              |   11.859|
+sw<1>          |f              |   12.043|
+sw<1>          |g              |   11.870|
+sw<2>          |C              |    8.771|
+sw<2>          |N              |    8.103|
+sw<2>          |Z              |    8.507|
+sw<2>          |a              |   11.749|
+sw<2>          |b              |   10.761|
+sw<2>          |c              |   11.491|
+sw<2>          |d              |   11.729|
+sw<2>          |e              |   11.070|
+sw<2>          |f              |   11.254|
+sw<2>          |g              |   11.081|
+sw<3>          |C              |    9.338|
+sw<3>          |N              |    7.997|
+sw<3>          |Z              |    9.912|
+sw<3>          |a              |   11.522|
+sw<3>          |b              |   10.497|
+sw<3>          |c              |   11.264|
+sw<3>          |d              |   11.502|
+sw<3>          |e              |   10.843|
+sw<3>          |f              |   11.027|
+sw<3>          |g              |   10.854|
+sw<8>          |C              |   12.691|
+sw<8>          |N              |   12.076|
+sw<8>          |Z              |   14.482|
+sw<8>          |a              |   15.306|
+sw<8>          |b              |   14.281|
+sw<8>          |c              |   15.048|
+sw<8>          |d              |   15.286|
+sw<8>          |e              |   14.627|
+sw<8>          |f              |   14.811|
+sw<8>          |g              |   14.638|
+sw<10>         |C              |   11.463|
+sw<10>         |N              |   10.848|
+sw<10>         |Z              |   13.186|
+sw<10>         |a              |   14.057|
+sw<10>         |b              |   13.032|
+sw<10>         |c              |   13.799|
+sw<10>         |d              |   14.037|
+sw<10>         |e              |   13.378|
+sw<10>         |f              |   13.562|
+sw<10>         |g              |   13.389|
+sw<11>         |C              |   12.645|
+sw<11>         |N              |   11.961|
+sw<11>         |Z              |   14.222|
+sw<11>         |a              |   15.166|
+sw<11>         |b              |   14.141|
+sw<11>         |c              |   14.908|
+sw<11>         |d              |   15.146|
+sw<11>         |e              |   14.487|
+sw<11>         |f              |   14.671|
+sw<11>         |g              |   14.498|
+sw<12>         |C              |   13.777|
+sw<12>         |N              |   13.197|
+sw<12>         |Z              |   15.568|
+sw<12>         |a              |   16.694|
+sw<12>         |b              |   15.669|
+sw<12>         |c              |   16.436|
+sw<12>         |d              |   16.674|
+sw<12>         |e              |   16.015|
+sw<12>         |f              |   16.199|
+sw<12>         |g              |   16.026|
+sw<13>         |C              |   11.731|
+sw<13>         |N              |   11.055|
+sw<13>         |Z              |   13.529|
+sw<13>         |a              |   14.396|
+sw<13>         |b              |   13.416|
+sw<13>         |c              |   14.138|
+sw<13>         |d              |   14.376|
+sw<13>         |e              |   13.717|
+sw<13>         |f              |   13.901|
+sw<13>         |g              |   13.728|
+sw<14>         |C              |   12.361|
+sw<14>         |N              |   11.746|
+sw<14>         |Z              |   13.892|
+sw<14>         |a              |   14.955|
+sw<14>         |b              |   13.930|
+sw<14>         |c              |   14.697|
+sw<14>         |d              |   14.935|
+sw<14>         |e              |   14.276|
+sw<14>         |f              |   14.460|
+sw<14>         |g              |   14.287|
+sw<15>         |C              |   12.778|
+sw<15>         |N              |   12.163|
+sw<15>         |Z              |   14.341|
+sw<15>         |a              |   15.372|
+sw<15>         |b              |   14.347|
+sw<15>         |c              |   15.114|
+sw<15>         |d              |   15.352|
+sw<15>         |e              |   14.693|
+sw<15>         |f              |   14.877|
+sw<15>         |g              |   14.704|
+---------------+---------------+---------+
+
+
+Analysis completed Sat Apr 22 16:17:29 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 672 MB
+
+
+

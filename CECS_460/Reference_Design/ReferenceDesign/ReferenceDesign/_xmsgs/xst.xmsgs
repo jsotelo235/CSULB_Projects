@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"C:\Users\tramel\Documents\XilinxProjects\ReferenceDesign\ReferenceDesign\ReferenceDesign\ipcore_dir\stack_ram.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">stack_ram</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"C:\Users\tramel\Documents\XilinxProjects\ReferenceDesign\ReferenceDesign\ReferenceDesign\ipcore_dir\scratch_ram.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">scratch_ram</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"C:\Users\tramel\Documents\XilinxProjects\ReferenceDesign\ReferenceDesign\ReferenceDesign\ipcore_dir\tb_rom.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">tb_rom</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\tramel\Documents\XilinxProjects\ReferenceDesign\ReferenceDesign\ReferenceDesign.v" Line 125: Assignment to <arg fmt="%s" index="1">port_id</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\tramel\Documents\XilinxProjects\ReferenceDesign\ReferenceDesign\ReferenceDesign.v" Line 126: Assignment to <arg fmt="%s" index="1">read_strobe</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\tramel\Documents\XilinxProjects\ReferenceDesign\ReferenceDesign\ReferenceDesign.v" Line 24: Net &lt;<arg fmt="%s" index="1">in_port[15]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tramel\Documents\XilinxProjects\ReferenceDesign\ReferenceDesign\ReferenceDesign.v</arg>&quot; line <arg fmt="%s" index="2">117</arg>: Output port &lt;<arg fmt="%s" index="3">PORT_ID</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">tbt</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\tramel\Documents\XilinxProjects\ReferenceDesign\ReferenceDesign\ReferenceDesign.v</arg>&quot; line <arg fmt="%s" index="2">117</arg>: Output port &lt;<arg fmt="%s" index="3">READ_STROBE</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">tbt</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">in_port</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n2377</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tbt/tramelblaze/readstrobeQ</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ReferenceDesign</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tbt/tramelblaze/enableportidQ</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ReferenceDesign</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tbt/tramelblaze/sel_portidQ</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ReferenceDesign</arg>&gt;.
+</msg>
+
+</messages>

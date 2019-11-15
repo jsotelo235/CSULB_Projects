@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/clk_div.xst" -ofn "D:/301/Lab2/LabProject2/clk_div.syr" 
+vhdtdtfi -lib work D:/301/Lab2/LabProject2/clk_div.v -lang verilog -prj LabProject2 -o clk_div.spl -module clk_div -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 clk_div.spl D:/301/Lab2/LabProject2/clk_div.sym 

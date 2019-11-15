@@ -1,0 +1,9 @@
+[Inputs]
+=select[1:0]=
+=d[7:0]=
+[Outputs]
+q
+[BiDir]
+[ATTRIBUTES]
+VeriModel mux8_to_1
+

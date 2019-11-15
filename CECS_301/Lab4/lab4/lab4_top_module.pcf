@@ -1,0 +1,42 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Mar 12 14:34:24 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "e" LOCATE = SITE "P15" LEVEL 1;
+COMP "f" LOCATE = SITE "T11" LEVEL 1;
+COMP "g" LOCATE = SITE "L18" LEVEL 1;
+COMP "D_in<10>" LOCATE = SITE "R16" LEVEL 1;
+COMP "anodes<0>" LOCATE = SITE "J17" LEVEL 1;
+COMP "D_in<11>" LOCATE = SITE "T13" LEVEL 1;
+COMP "anodes<1>" LOCATE = SITE "J18" LEVEL 1;
+COMP "D_in<12>" LOCATE = SITE "H6" LEVEL 1;
+COMP "anodes<2>" LOCATE = SITE "T9" LEVEL 1;
+COMP "D_in<13>" LOCATE = SITE "U12" LEVEL 1;
+COMP "anodes<3>" LOCATE = SITE "J14" LEVEL 1;
+COMP "D_in<14>" LOCATE = SITE "U11" LEVEL 1;
+COMP "anodes<4>" LOCATE = SITE "P14" LEVEL 1;
+COMP "D_in<15>" LOCATE = SITE "V10" LEVEL 1;
+COMP "anodes<5>" LOCATE = SITE "T14" LEVEL 1;
+COMP "anodes<6>" LOCATE = SITE "K2" LEVEL 1;
+COMP "anodes<7>" LOCATE = SITE "U13" LEVEL 1;
+COMP "D_in<0>" LOCATE = SITE "J15" LEVEL 1;
+COMP "D_in<1>" LOCATE = SITE "L16" LEVEL 1;
+COMP "D_in<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "D_in<3>" LOCATE = SITE "R15" LEVEL 1;
+COMP "D_in<4>" LOCATE = SITE "R17" LEVEL 1;
+COMP "D_in<5>" LOCATE = SITE "T18" LEVEL 1;
+COMP "D_in<6>" LOCATE = SITE "U18" LEVEL 1;
+COMP "D_in<7>" LOCATE = SITE "R13" LEVEL 1;
+COMP "D_in<8>" LOCATE = SITE "T8" LEVEL 1;
+COMP "D_in<9>" LOCATE = SITE "U8" LEVEL 1;
+COMP "wr_pulse" LOCATE = SITE "M17" LEVEL 1;
+COMP "reset" LOCATE = SITE "M18" LEVEL 1;
+COMP "clk_in" LOCATE = SITE "E3" LEVEL 1;
+COMP "addr_step" LOCATE = SITE "P18" LEVEL 1;
+COMP "a" LOCATE = SITE "T10" LEVEL 1;
+COMP "b" LOCATE = SITE "R10" LEVEL 1;
+COMP "c" LOCATE = SITE "K16" LEVEL 1;
+COMP "d" LOCATE = SITE "K13" LEVEL 1;
+SCHEMATIC END;
+

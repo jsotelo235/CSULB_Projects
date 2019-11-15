@@ -1,0 +1,8 @@
+verilog isim_temp "ipcore_dir/stack_ram.v"
+verilog isim_temp "ipcore_dir/scratch_ram.v"
+verilog isim_temp "../tramelblaze4.0.v"
+verilog isim_temp "ipcore_dir/tb_rom.v"
+verilog isim_temp "../tramelblaze_top4.0.v"
+verilog isim_temp "../ReferenceDesign.v"
+verilog isim_temp "ReferenceDesign_tf.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

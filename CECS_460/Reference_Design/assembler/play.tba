@@ -1,0 +1,53 @@
+; john tramel
+; cecs 460
+; TramelBlaze Assembly Program Template
+
+; declare constants for coding
+
+ZEROS   EQU    0000
+ONE     EQU    0001
+CONST   EQU    O123
+LABEL   EQU    ABCD
+
+; the start of the assembly program should
+; be used to initialize the design
+; only executed at startup (reset)
+
+START   LOAD   R1, LABEL   
+        LOAD   R2, 4567
+        ADD    R1, R2
+        SUBC   R1, R2
+        JUMP   MAIN
+
+; two architectural approaches
+; 1) main follows init then routines
+; 2) routines follow init main at bottom
+; - prefer #2 since alway find main quickly
+
+SUB1    LOAD   R5, 000F
+        RETURN
+
+SUB2    LOAD   R5, 000D
+        RETURN
+
+ISR     LOAD   R0, ONE
+        INPUT  RA, 1234
+        AND    RA, R0
+        JUMPZ  ISR1
+        RETEN
+
+ISR1    SUB    R9, ONE
+        RETEN
+
+; main loop is where processor spends most of its time
+
+MAIN    JUMP ENDIT 
+
+; ISR vectored through 0FFE
+
+        ADDRESS 0FFE
+ENDIT   JUMP ISR
+
+        END
+
+

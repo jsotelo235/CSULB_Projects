@@ -1,0 +1,15 @@
+[Inputs]
+clk
+reset
+we
+=W_adr[2:0]=
+=R_adr[2:0]=
+=S_adr[2:0]=
+=W[15:0]=
+[Outputs]
+=R[15:0]=
+=S[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel reg_file
+

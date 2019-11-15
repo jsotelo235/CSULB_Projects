@@ -1,0 +1,4 @@
+﻿  program2_structs_scantron.cpp
+d:\cecs 275\project2\project2\program2_structs_scantron.cpp(133): warning C4715: 'testGrades': not all control paths return a value
+  Project2.vcxproj -> D:\CECS 275\Project2\Debug\Project2.exe
+  Project2.vcxproj -> D:\CECS 275\Project2\Debug\Project2.pdb (Partial PDB)

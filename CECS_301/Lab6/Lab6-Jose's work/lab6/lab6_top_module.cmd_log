@@ -1,0 +1,55 @@
+xst -intstyle ise -ifn "D:/301/Lab6/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/lab6/lab6_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab6/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/lab6/lab6_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab6.ucf -p xc7a100t-csg324-3 lab6_top_module.ngc lab6_top_module.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab6.ucf -p xc7a100t-csg324-3 lab6_top_module.ngc lab6_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab6_top_module_map.ncd lab6_top_module.ngd lab6_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab6_top_module_map.ncd lab6_top_module.ncd lab6_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab6_top_module.twx lab6_top_module.ncd -o lab6_top_module.twr lab6_top_module.pcf -ucf lab6.ucf 
+bitgen -intstyle ise -f lab6_top_module.ut lab6_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab6.ucf -p xc7a100t-csg324-3 "lab6_top_module.ngc" lab6_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab6_top_module_map.ncd lab6_top_module.ngd lab6_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab6_top_module_map.ncd lab6_top_module.ncd lab6_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab6_top_module.twx lab6_top_module.ncd -o lab6_top_module.twr lab6_top_module.pcf -ucf lab6.ucf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab6.ucf -p xc7a100t-csg324-3 "lab6_top_module.ngc" lab6_top_module.ngd  
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab6.ucf -p xc7a100t-csg324-3 "lab6_top_module.ngc" lab6_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab6_top_module_map.ncd lab6_top_module.ngd lab6_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab6_top_module_map.ncd lab6_top_module.ncd lab6_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab6_top_module.twx lab6_top_module.ncd -o lab6_top_module.twr lab6_top_module.pcf -ucf lab6.ucf 
+bitgen -intstyle ise -f lab6_top_module.ut lab6_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab6.ucf -p xc7a100t-csg324-3 "lab6_top_module.ngc" lab6_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab6_top_module_map.ncd lab6_top_module.ngd lab6_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab6_top_module_map.ncd lab6_top_module.ncd lab6_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab6_top_module.twx lab6_top_module.ncd -o lab6_top_module.twr lab6_top_module.pcf -ucf lab6.ucf 
+bitgen -intstyle ise -f lab6_top_module.ut lab6_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6 - Copy/lab6/lab6_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab6.ucf -p xc7a100t-csg324-3 "lab6_top_module.ngc" lab6_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab6_top_module_map.ncd lab6_top_module.ngd lab6_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab6_top_module_map.ncd lab6_top_module.ncd lab6_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab6_top_module.twx lab6_top_module.ncd -o lab6_top_module.twr lab6_top_module.pcf -ucf lab6.ucf 
+bitgen -intstyle ise -f lab6_top_module.ut lab6_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6-Jose's work/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6-Jose's work/lab6/lab6_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab6.ucf -p xc7a100t-csg324-3 "lab6_top_module.ngc" lab6_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab6_top_module_map.ncd lab6_top_module.ngd lab6_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab6_top_module_map.ncd lab6_top_module.ncd lab6_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab6_top_module.twx lab6_top_module.ncd -o lab6_top_module.twr lab6_top_module.pcf -ucf lab6.ucf 
+bitgen -intstyle ise -f lab6_top_module.ut lab6_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab6/Lab6-Jose's work/lab6/lab6_top_module.xst" -ofn "D:/301/Lab6/Lab6-Jose's work/lab6/lab6_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab6.ucf -p xc7a100t-csg324-3 "lab6_top_module.ngc" lab6_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab6_top_module_map.ncd lab6_top_module.ngd lab6_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab6_top_module_map.ncd lab6_top_module.ncd lab6_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab6_top_module.twx lab6_top_module.ncd -o lab6_top_module.twr lab6_top_module.pcf -ucf lab6.ucf 
+bitgen -intstyle ise -f lab6_top_module.ut lab6_top_module.ncd 

@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="Lab_8" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/CPU_EU D:|301|Lab8 RISC Processor|Lab_8|CPU_EU.v</ClosedNode>
+         <ClosedNode>/CPU_EU D:|301|Lab8 RISC Processor|Lab_8|CPU_EU.v/idp - integer_datapath</ClosedNode>
+         <ClosedNode>/RISC_Processor D:|301|Lab8 RISC Processor|Lab_8|RISC_Processor.v</ClosedNode>
+         <ClosedNode>/RISC_Processor D:|301|Lab8 RISC Processor|Lab_8|RISC_Processor.v/cpu_eu - CPU_EU</ClosedNode>
+         <ClosedNode>/display_controller D:|301|Lab8 RISC Processor|Lab_8|display_controller.v</ClosedNode>
+         <ClosedNode>/integer_datapath D:|301|Lab8 RISC Processor|Lab_8|integer_datapath.v</ClosedNode>
+         <ClosedNode>/integer_datapath D:|301|Lab8 RISC Processor|Lab_8|integer_datapath.v/Reg_File - reg_file</ClosedNode>
+         <ClosedNode>/lab8_top_module D:|301|Lab8 RISC Processor|Lab_8|lab8_top_module.v/RISC - RISC_Processor/cpu_eu - CPU_EU/idp - integer_datapath/reg_file - reg_file</ClosedNode>
+         <ClosedNode>/lab8_top_module D:|301|Lab8 RISC Processor|Lab_8|lab8_top_module.v/display - display_controller</ClosedNode>
+         <ClosedNode>/lab8_top_module D:|301|Lab8 RISC Processor|Lab_8|lab8_top_module.v/rama - ramA</ClosedNode>
+         <ClosedNode>/lab8_top_module D:|CSULB_Classes|CECS_301|Lab8 RISC Processor|Lab_8|lab8_top_module.v/RISC - RISC_Processor</ClosedNode>
+         <ClosedNode>/lab8_top_module D:|CSULB_Classes|CECS_301|Lab8 RISC Processor|Lab_8|lab8_top_module.v/RISC - RISC_Processor/cpu_eu - CPU_EU</ClosedNode>
+         <ClosedNode>/lab8_top_module D:|CSULB_Classes|CECS_301|Lab8 RISC Processor|Lab_8|lab8_top_module.v/display - display_controller</ClosedNode>
+         <ClosedNode>/lab8_top_module D:|CSULB_Classes|CECS_301|Lab8 RISC Processor|Lab_8|lab8_top_module.v/rama - ramA</ClosedNode>
+         <ClosedNode>/ramA D:|301|Lab8 RISC Processor|Lab_8|ramA.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>step_mem_db - one_shot (D:/CSULB_Classes/CECS_301/Lab8 RISC Processor/Lab_8/one_shot.v)</SelectedItem>
+         <SelectedItem>RISC - RISC_Processor (D:/CSULB_Classes/CECS_301/Lab8 RISC Processor/Lab_8/RISC_Processor.v)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000166000000020000000000000000000000000200000064ffffffff000000810000000300000002000001660000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>step_mem_db - one_shot (D:/CSULB_Classes/CECS_301/Lab8 RISC Processor/Lab_8/one_shot.v)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000fa000000010000000100000000000000000000000064ffffffff000000810000000000000001000000fa0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000252000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001860000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>alu.v</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000109000000010001000100000000000000000000000064ffffffff000000810000000000000001000001090000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e90000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+</Project>

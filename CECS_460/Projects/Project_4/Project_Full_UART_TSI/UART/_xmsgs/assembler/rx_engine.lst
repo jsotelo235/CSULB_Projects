@@ -1,0 +1,310 @@
+               ; Jose Sotelo
+               ; CECS 460 SOC
+               ; TramelBlaze Assembly Program for UART Tx_Engine
+               
+               
+               ;=======================================================
+               ;	Define Variables Alias
+               ;=======================================================
+               ASCII_C				EQU		0043
+               ASCII_S				EQU		0053
+               ASCII_U   			EQU		0055
+               ASCII_L   			EQU    	004C
+               ASCII_B				EQU		0042
+               ASCII_E				EQU		0045
+               ASCII_4				EQU		0034
+               ASCII_6				EQU		0036
+               ASCII_ZERO			EQU		0030
+               ASCII_DASH			EQU		002D
+               ASCII_BRACKETL		EQU		005B
+               ASCII_BRACKETR		EQU		005D
+               ASCII_CR			EQU		000D
+               ASCII_LF			EQU		000A
+               ASCII_SPACE			EQU		0020
+               ZERO				EQU		0000
+               PORT				EQU		0000
+               
+               ;=======================================================
+               ;	Register Alias
+               ;=======================================================
+               TEMP				EQU		R1
+               COUNTER				EQU		R2
+               POINTER				EQU		R3
+               LEDS				EQU		R4
+               COUNT_LEDS			EQU		R5
+               DELAY				EQU		R6
+               
+               ;=======================================================
+               ;	Start
+               ;	Startup Code Initialization
+               ;	only executed at startup (reset)
+               ;=======================================================
+               START
+               		ENINT							; Enable Interrupt
+0000 1E00               		
+               		LOAD	TEMP,	 	ZERO		; Load register R1 with 0000								(R1 <- 0000)
+0001 AE01 0000
+               		LOAD	COUNTER, 	ZERO		; Load register R2 with 0000								(R2 <- 0000)
+0003 AE02 0000
+               		LOAD	POINTER, 	ZERO		; Load register R3 with 0000								(R3 <- 0000)
+0005 AE03 0000
+               		LOAD	COUNT_LEDS, ZERO		; Load register R5 with 0000
+0007 AE05 0000
+               		LOAD	LEDS,		0001
+0009 AE04 0001
+               		
+               		LOAD	TEMP, ASCII_C			; Load register R4 with the ASCII value 0x43				(R4 <- 0x43)
+000B AE01 0043
+               		STORE	TEMP, 0000				; Write register R4 to scratchpad RAM location 0x00			(RAM[0000] <- R4)
+000D F401 0000
+               		
+               		LOAD	TEMP, ASCII_S			; Load register R4 with ASCII value 0x53					(R4 <- 0x53)
+000F AE01 0053
+               		STORE	TEMP, 0001				; Write register R4 to scratchpad RAM location 0x01			(RAM[0001] <- R4)
+0011 F401 0001
+               		
+               		LOAD	TEMP, ASCII_U			; Load register R4 with ASCII value 0x55					(R4 <- 0x55)
+0013 AE01 0055
+               		STORE	TEMP, 0002				; Write register R4 to scratchpad RAM location 0x02			(RAM[0002] <- R4)
+0015 F401 0002
+               		
+               		LOAD	TEMP, ASCII_L			; Load register R4 with ASCII value 0x4C					(R4 <- 0x4C)
+0017 AE01 004C
+               		STORE	TEMP, 0003				; Write register R4 to scratchpad RAM location 0x03			(RAM[0003] <- R4)
+0019 F401 0003
+               		
+               		LOAD	TEMP, ASCII_B			; Load register R4 with ASCII value 0x42					(R4 <- 0x42)
+001B AE01 0042
+               		STORE	TEMP, 0004				; Write register R4 to scratchpad RAM location 0x04			(RAM[0004] <- R4)
+001D F401 0004
+               		
+               		LOAD	TEMP, ASCII_SPACE		; Load register R4 with ASCII value 0x20					(R4 <- 0x20)
+001F AE01 0020
+               		STORE	TEMP, 0005				; Write register R4 to scratchpad RAM location 0x05			(RAM[0005] <- R4)
+0021 F401 0005
+               	
+               		LOAD	TEMP, ASCII_C			; Load register R4 with ASCII value 0x43					(R4 <- 0x43)
+0023 AE01 0043
+               		STORE	TEMP, 0006				; Write register R4 to scratchpad RAM location 0x06			(RAM[0006] <- R4)
+0025 F401 0006
+               		
+               		LOAD	TEMP, ASCII_E			; Load register R4 with ASCII value 0x45					(R4 <- 0x45)
+0027 AE01 0045
+               		STORE	TEMP, 0007				; Write register R4 to scratchpad RAM location 0x07			(RAM[0007] <- R4)
+0029 F401 0007
+               	
+               		LOAD	TEMP, ASCII_C			; Load register R4 with ASCII value 0x43					(R4 <- 0x43)
+002B AE01 0043
+               		STORE	TEMP, 0008				; Write register R4 to scratchpad RAM location 0x08			(RAM[0008] <- R4)
+002D F401 0008
+               	
+               		LOAD	TEMP, ASCII_S			; Load register R4 with ASCII value 0x53					(R4 <- 0x53)
+002F AE01 0053
+               		STORE	TEMP, 0009				; Write register R4 to scratchpad RAM location 0x09			(RAM[0009] <- R4)
+0031 F401 0009
+               	
+               		LOAD	TEMP, ASCII_SPACE		; Load register R4 with ASCII value 0x20					(R4 <- 0x20)
+0033 AE01 0020
+               		STORE	TEMP, 000A				; Write register R4 to scratchpad RAM location 0x0A			(RAM[000A] <- R4)
+0035 F401 000A
+               		
+               		LOAD	TEMP, ASCII_4			; Load register R4 with ASCII value 0x34					(R4 <- 0x34)
+0037 AE01 0034
+               		STORE	TEMP, 000B				; Write register R4 to scratchpad RAM location 0x0B			(RAM[000B] <- R4)
+0039 F401 000B
+               		
+               		LOAD	TEMP, ASCII_6			; Load register R4 with ASCII value 0x36					(R4 <- 0x36)
+003B AE01 0036
+               		STORE	TEMP, 000C				; Write register to R4 to scratchpad RAM location 0x0C		(RAM[000C] <- R4)
+003D F401 000C
+               		
+               		LOAD	TEMP, ASCII_ZERO		; Load register R4 with ASCII value 0x30					(R4 <- 0x30)
+003F AE01 0030
+               		STORE	TEMP, 000D				; Write register to R4 to scratchpad RAM location 0x0D		(RAM[000D] <- R4)
+0041 F401 000D
+               		
+               		LOAD	TEMP, ASCII_SPACE		; Load register R4 with ASCII value 0x20					(R4 <- 0x20)
+0043 AE01 0020
+               		STORE	TEMP, 000E				; Write register R4 to scratchpad RAM location 0x0E			(RAM[000E] <- R4)
+0045 F401 000E
+               		
+               		LOAD	TEMP, ASCII_DASH		; Load register R4 with ASCII value 0x2D					(R4 <- 0x2D)
+0047 AE01 002D
+               		STORE	TEMP, 000F				; Write register R4 to scratchpad RAM location 0x0F			(RAM[000F] <- R4)
+0049 F401 000F
+               		
+               		LOAD	TEMP, ASCII_SPACE		; Load register R4 with ASCII value 0x20					(R4 <- 0x20)
+004B AE01 0020
+               		STORE	TEMP, 0010				; Write register R4 to scratchpad RAM location 0x10			(RAM[0010] <- R4)
+004D F401 0010
+               		
+               		LOAD	TEMP, ASCII_BRACKETL 	; Load register R4 with ASCII value 0x5B					(R4 <- 0x5B)
+004F AE01 005B
+               		STORE	TEMP, 0011				; Write register R4 to scratchpad RAM location 0x11			(RAM[0011] <- R4)
+0051 F401 0011
+               		
+               		; counter
+               		
+               		LOAD	TEMP, ASCII_BRACKETR 	; Load register R4 with ASCII value 0x5B					(R4 <- 0x5B)
+0053 AE01 005D
+               		STORE	TEMP, 0017				; Write register R4 to scratchpad RAM location 0x17			(RAM[0017] <- R4)
+0055 F401 0017
+               		
+               		LOAD,	TEMP, ASCII_CR			; Load register R4 with ASCII value 0x0D 					(R4 <- 0x0D)
+0057 AE01 000D
+               		STORE	TEMP, 0018				; Write register R4 to scratchpad RAM location 0x18			(RAM[0018] <- R4)
+0059 F401 0018
+               		
+               		LOAD	TEMP, ASCII_LF			; Load register R4 with ASCII value 0x0A					(R4 <- 0x0A)
+005B AE01 000A
+               		STORE	TEMP, 0019				; Write register R4 to scratchpad RAM location 0019			(RAM[0019] <- R4)
+005D F401 0019
+               		
+                       JUMP   	MAIN
+005F A400 0313
+               		
+               ;=======================================================
+               ;	Binary to ASCII Routine
+               ;	All service routines + ISR
+               ;=======================================================
+               		ADDRESS 0100
+               BinToASC
+                       LOAD   	RE, COUNTER			; Load register RE with contents of register R2 				(RE <- R2)
+302E
+               		
+               		LOAD	RD, 2710			; Load register RD with literal 2710(10000)						(RD <- 2710)
+0101 AE0D 2710
+               		CALL	FINDIT				; suspend current execution and branch to the FINDIT routine
+0103 8E00 0200
+               		ADD		RB, 0030			; Add register RB with 0x30										(RB <- RB + 0030)
+0105 820B 0030
+               		STORE	RB, 0012			; Write register RB to scratchpad RAM location 0x12				(RAM[0012] <- RB)
+0107 F40B 0012
+               		
+               		LOAD	RD, 03E8			; Load register RD with 0x3E8(1000)								(RD <- 03E8)
+0109 AE0D 03E8
+               		CALL	FINDIT				; suspend current execution and branch to the FINDIT routine
+010B 8E00 0200
+               		ADD		RB, 0030			; Add register RB with 0x30										(RB <- RB + 0030)
+010D 820B 0030
+               		STORE	RB, 0013			; Write register RB to scratchpad RAM location 0x13				(RAM[0013] <- RB)
+010F F40B 0013
+               		
+               		LOAD	RD, 0064			; Load register RD with 0x64									(RD <- 0064)
+0111 AE0D 0064
+               		CALL	FINDIT				; suspend current execution and branch to the FINDIT routine
+0113 8E00 0200
+               		ADD		RB, 0030			; Add register RB with 0x30										(RB <- RB + 0030)
+0115 820B 0030
+               		STORE	RB, 0014			; Write register RB to scratchpad RAM location 0x14				(RAM[0014] <- RB)
+0117 F40B 0014
+               		
+               		LOAD	RD, 000A			; Load register RD with 000A(10)								(RD <- 000A)
+0119 AE0D 000A
+               		CALL	FINDIT				; suspend current execution and branch to the FINDIT routine
+011B 8E00 0200
+               		ADD		RB, 0030			; Add register RB with 0x30										(RB <- RB + 0030)
+011D 820B 0030
+               		STORE	RB, 0015			; Write register RB to scratchpad RAM location 0x15				(RAM[0015] <- RB)
+011F F40B 0015
+               		
+               		ADD		RE, 0030			; Add register RE with 0x30										(RE = RE + 0030)
+0121 820E 0030
+               		STORE	RE, 0016			; Write register RB to scratchpad RAM location 0x16				(RAM[0016] <- RB)
+0123 F40E 0016
+               		
+               		RETURN
+0125 3A00               		
+               ;=======================================================
+               ;	FInd It Routine
+               ;=======================================================
+               		ADDRESS 0200				; Directive specifies the subsequent code to be put to a specific address in instruction ROM
+               FINDIT
+               		LOAD	RB, ZERO			; Load register RB with 0										(RB <- 0000)
+0200 AE0B 0000
+               REPEAT	SUB		RE, RD				; Subtract register RD from register RE 						(RE <- RE - RD)
+5EDE
+               		JUMPC	FOUNDIT				; Jump if CARRY to FOUNDIT										(if CARRY PC <— FOUNDIT)
+0203 A600 0209
+               		ADD		RB, 0001			; Add register RB with 1										(RB <- RB + 0001)
+0205 820B 0001
+               		JUMP	REPEAT				; Unconditionally jump to REPEAT								(PC <- REPEAT)
+0207 A400 0202
+               FOUNDIT
+               		ADD		RE, RD				; ADD register RE with RD										(RE <- RE + RD)
+04DE
+               		
+               		RETURN						; Unconditionally return from subroutine						(PC <— TOS + 1)		
+020A 3A00               	
+               ;=======================================================
+               ;	ISR
+               ;=======================================================
+               		ADDRESS 0300				; Directive specifies the subsequent code to be put to a specific address in instruction ROM
+               ISR		
+               		FETCH	TEMP, POINTER		; Read scratchpad RAM location 0000 into register R1			(R1 <- RAM[000A])
+7231
+               		OUTPUT	TEMP, PORT			; Write register R1 to port 0000								(Port(0000) <- R1)
+0301 B801 0000
+               		ADD		POINTER, 0001		; Add register R3 with 0001 to traverse memory					(R3 <- R3 + 0001)
+0303 8203 0001
+               		
+               		COMP	POINTER, 0012		; Compare register R3 with literal 0012.						(if R2== 0012, then ZERO =1)
+0305 9803 0012
+               		CALLZ	BinToASC			; If ZERO call subroutine at 0100								(if ZERO TOS <— PC; PC <— 0100)
+0307 9400 0100
+               		
+               		COMP	POINTER, 0020		; Compare register R3 with register 0020						(if R3 < 0020, then ZERO =1)
+0309 9803 0020
+               		JUMPZ	NEXT_LINE			; Jump if ZERO to NEXT_LINE										(if ZERO PC <— NEXT_LINE)
+030B AA00 030e
+               		
+               		RETEN						; Return from interrupt with interrupts enabled
+030D 4600               		
+               NEXT_LINE
+               		LOAD	POINTER, ZERO		; Load R3 with 0000												(R3 <- 0000)
+030E AE03 0000
+               		ADD		COUNTER, 0001		; Add R2 = R2 + 0001											(R2 <- R2 + 1)
+0310 8202 0001
+               		RETEN						; Return from interrupt with interrupts enabled
+0312 4600               		
+               ;=======================================================
+               ;	Main Loop
+               ;	main loop is where processor spends most of its time
+               ;=======================================================
+               
+               MAIN
+               		ADD		COUNT_LEDS, 0001
+0313 8205 0001
+               		ADD		DELAY, ZERO
+0315 8206 0000
+               		COMP	DELAY, 0200
+0317 9806 0200
+               		JUMPC	DONE
+0319 A600 0320
+               		
+               		LOAD	COUNT_LEDS, ZERO
+031B AE05 0000
+               		LOAD	DELAY,		ZERO
+031D AE06 0000
+               		RL		LEDS
+031F 4804
+               		
+               DONE
+               		OUTPUT	LEDS, 0001
+0320 B804 0001
+               		JUMP	MAIN
+0322 A400 0313
+               		
+               
+               		
+               ;=======================================================
+               ;	ISR vectored through 0FFE
+               ;=======================================================
+                       ADDRESS 0FFE			; Directive specifies the subsequent code to be put to a specific address in instruction ROM
+               		
+               ENDIT   JUMP ISR
+0FFE A400 0300
+               
+                       END
+               
+               

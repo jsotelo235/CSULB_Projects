@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/301/Lab2/LabProject2/one_shot.v -lang verilog -prj LabProject2 -o one_shot.spl -module one_shot -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 one_shot.spl D:/301/Lab2/LabProject2/one_shot.sym 

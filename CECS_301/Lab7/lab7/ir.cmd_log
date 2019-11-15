@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/301/Lab7/lab7/ir.v -lang verilog -prj lab7 -o ir.spl -module ir -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ir.spl D:/301/Lab7/lab7/ir.sym 

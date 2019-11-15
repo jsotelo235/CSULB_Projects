@@ -1,0 +1,17 @@
+john tramel cecs csulb 12/7/2017
+reference design for TramelBlaze
+   * Verilog design instantiating the TramelBlaze
+   * Additional logic for function
+   * Target Nexys 4 
+@ reset no leds
+center button returns to reset state
+upper button generates interrupt causing a 1 to be shifted through the LEDS
+
+   * Python assembler for translating assembly to machine
+   * .tba (Tramel Blaze Assembly) contains assembly file
+   * With Python installed, double click assembler to run
+   * Output .coe file to build memories
+   * Output .sim file for simulation
+
+For use by CSULB students attempting to master the PicoBlaze instruction
+set as implemented on the TramelBlaze

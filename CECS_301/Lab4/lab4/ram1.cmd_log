@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/301/Lab4/lab4/ram1.v -lang verilog -prj lab4 -o ram1.spl -module ram1 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ram1.spl D:/301/Lab4/lab4/ram1.sym 

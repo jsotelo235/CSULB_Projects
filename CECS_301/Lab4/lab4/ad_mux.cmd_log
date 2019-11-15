@@ -1,0 +1,20 @@
+vhdtdtfi -lib work D:/301/Lab4/lab4/ad_mux.v -lang verilog -prj lab4 -o ad_mux.spl -module ad_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ad_mux.spl D:/301/Lab4/lab4/ad_mux.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/ad_mux.v -lang verilog -prj lab4 -o ad_mux.spl -module ad_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ad_mux.spl D:/301/Lab4/lab4/ad_mux.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/ad_mux.v -lang verilog -prj lab4 -o ad_mux.spl -module ad_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ad_mux.spl D:/301/Lab4/lab4/ad_mux.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/ad_mux.v -lang verilog -prj lab4 -o ad_mux.spl -module ad_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ad_mux.spl D:/301/Lab4/lab4/ad_mux.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/ad_mux.v -lang verilog -prj lab4 -o ad_mux.spl -module ad_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ad_mux.spl D:/301/Lab4/lab4/ad_mux.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/ad_mux.v -lang verilog -prj lab4 -o ad_mux.spl -module ad_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ad_mux.spl D:/301/Lab4/lab4/ad_mux.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/ad_mux.v -lang verilog -prj lab4 -o ad_mux.spl -module ad_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ad_mux.spl D:/301/Lab4/lab4/ad_mux.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/ad_mux.v -lang verilog -prj lab4 -o ad_mux.spl -module ad_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ad_mux.spl D:/301/Lab4/lab4/ad_mux.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/ad_mux.v -lang verilog -prj lab4 -o ad_mux.spl -module ad_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ad_mux.spl D:/301/Lab4/lab4/ad_mux.sym 
+vhdtdtfi -lib work D:/301/Lab4/lab4/ad_mux.v -lang verilog -prj lab4 -o ad_mux.spl -module ad_mux -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 ad_mux.spl D:/301/Lab4/lab4/ad_mux.sym 

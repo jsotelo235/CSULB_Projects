@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family artix7 -refsym test D:/301/Lab4/lab4/test.sch D:/301/Lab4/lab4/test.sym 

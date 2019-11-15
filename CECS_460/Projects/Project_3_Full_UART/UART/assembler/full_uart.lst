@@ -1,0 +1,922 @@
+               ; Jose Sotelo
+               ; CECS 460
+               ; Full duplex UART and TramelBlaze Assembly
+               
+               ;=======================================================
+               ;	Define Variables Alias
+               ;=======================================================
+               ZERO				EQU		0000
+               ONE					EQU		0001
+               PORT				EQU		0001
+               LED_PORT			EQU		0005
+               RX_RDY				EQU		0001
+               TX_RDY				EQU		0002
+               
+               ASCII_BS			EQU		0008					; backspace
+               ASCII_TAB			EQU		0009					; tab
+               ASCII_LF			EQU		000A					; line feed
+               ASCII_CR			EQU		000D					; carriage return
+               ASCII_SLASH			EQU		002F					; '/'
+               ASCII_EQUALS		EQU		003D					; '=' 
+               ASCII_ASTERISK		EQU		002A					; '*'
+               ASCII_AT			EQU		0040					; @
+               ASCII_DOT			EQU		002E					; '.'
+               ASCII_SPACE			EQU		0020					; space
+               ASCII_GREATER		EQU		003E					; >
+               ASCII_COLON			EQU		003A					; ':'
+               ASCII_B_SLASH		EQU		005C					; '\'
+               
+               ASCII_ZERO			EQU		0030
+               ASCII_ONE			EQU		0031
+               ASCII_TWO			EQU		0032
+               ASCII_THREE			EQU		0033
+               ASCII_FOUR			EQU		0034
+               ASCII_FIVE			EQU		0035
+               ASCII_SIX			EQU		0036
+               ASCII_SEVEN			EQU		0037
+               ASCII_EIGHT			EQU		0038
+               ASCII_NINE			EQU		0039
+               ASCII_A				EQU		0041
+               ASCII_B				EQU		0042
+               ASCII_C				EQU		0043
+               ASCII_D				EQU		0044
+               ASCII_E				EQU		0045
+               ASCII_F				EQU		0046
+               ASCII_G				EQU		0047
+               ASCII_H				EQU		0048
+               ASCII_I				EQU		0049
+               ASCII_J				EQU		004A
+               ASCII_K				EQU		004B
+               ASCII_L				EQU		004C
+               ASCII_M				EQU		004D
+               ASCII_N				EQU		004E
+               ASCII_O				EQU		004F
+               ASCII_P				EQU		0050
+               ASCII_Q				EQU		0051
+               ASCII_R				EQU		0052
+               ASCII_S				EQU		0053
+               ASCII_T				EQU		0054
+               ASCII_U				EQU		0055
+               ASCII_V				EQU		0056
+               ASCII_W				EQU		0057
+               ASCII_X				EQU		0058
+               ASCII_Y				EQU		0059
+               ASCII_Z				EQU		005A
+               
+               ;=======================================================
+               ;	Register Alias
+               ;=======================================================
+               TEMP_REG			EQU		R0						; temporay register
+               POINTER				EQU		R1						; register used to point to scratchpad memory location
+               COUNTER				EQU		R2						; register used to keep track of how many forward slash to print
+               COUNT				EQU		R3						; register used to keep track of how many forward slash to print at the end of the banner
+               UART_STATUS			EQU		R4						; register used to store the current status of UART signals
+               CURRENT_CASE		EQU		R5						; register used to keep track of which case to display
+               CHAR_COUNT			EQU		R6						; register used to keep track of the character count
+               STORE_DATA			EQU		R7						; register used to store the data received
+               
+               ;=======================================================
+               ;	Start
+               ;	Startup Code Initialization
+               ;	only executed at startup (reset)
+               ;=======================================================
+               START   
+               		LOAD	TEMP_REG,	  ZERO					; load register R0 with 0000
+0000 AE00 0000
+               		LOAD	POINTER,	  ZERO					; load register R1 with 0000
+0002 AE01 0000
+               		LOAD	COUNTER,	  ZERO					; load register R2 with 0000
+0004 AE02 0000
+               		LOAD	COUNT,		  ZERO					; load register R3 with 0000
+0006 AE03 0000
+               		LOAD	UART_STATUS,  ZERO					; load register R4 with 0000
+0008 AE04 0000
+               		LOAD	CURRENT_CASE, ONE					; load register R5 with 0001 to display banner first
+000A AE05 0001
+               
+               		CALL	BANNER								; unconditionally call subroutine BANNER
+000C 8E00 0019
+               		CALL	PROMPT_USER							; unconditionally call subroutine PROMPT_USER
+000E 8E00 00e9
+               		CALL	TOWN								; unconditionally call subroutine TOWN
+0010 8E00 0109
+               		CALL	BACKSPACE							; unconditionally call subroutine BACKSPACE
+0012 8E00 016d
+               		CALL	CRLF								; unconditionally call subroutine CRLF
+0014 8E00 017a
+               													
+               		ENINT										; enable interrupts
+0016 1E00                       JUMP    MAIN
+0017 A400 0316
+               	
+               ;=======================================================
+               ;	Banner Subroutine
+               ;	Banner is executed on startup
+               ;	/////////////////////////////////
+               ;		CSULB CECS 460   
+               ;		Jose Sotelo				   
+               ;	/////////////////////////////////
+               ;=======================================================
+               BANNER
+               
+               			LOAD	TEMP_REG, 	ASCII_SLASH			; load the ASCII value for '/' to temporay register		
+0019 AE00 002F
+               ADD_SLASH	STORE	TEMP_REG, 	COUNTER				; store the temp reg into scratchpad						
+7620
+               			ADD		COUNTER,	0001				; increment pointer to point to scratchpad location		
+001C 8202 0001
+               			
+               			COMP	COUNTER,  	0028				; if rX == kk then ZERO = 1; if rx < kk then CARRY = 1
+001E 9802 0028
+               			JUMPC	ADD_SLASH						; if CARRY PC <— ADD_SLASH
+0020 A600 001b
+               			
+               			LOAD	TEMP_REG,	ASCII_CR			; load the ASCII value for <CR>
+0022 AE00 000D
+               			STORE	TEMP_REG,	0029				; store the temp reg into scratchpad location (41)
+0024 F400 0029
+               			
+               			LOAD	TEMP_REG, 	ASCII_LF			; load the ASCII value for <LF>
+0026 AE00 000A
+               			STORE	TEMP_REG,	002A				; store the temp reg into scratchpad location (42)
+0028 F400 002A
+               			
+               			LOAD	TEMP_REG,	ASCII_TAB			; load the ASCII value for tab
+002A AE00 0009
+               			STORE	TEMP_REG,	002B				; store the temp reg into scratchpad location (43)
+002C F400 002B
+               			
+               			LOAD	TEMP_REG,	ASCII_C				; load the ASCII value for C
+002E AE00 0043
+               			STORE 	TEMP_REG, 	002C				; store the temp reg into scratchpad location (44)
+0030 F400 002C
+               			
+               			LOAD	TEMP_REG,	ASCII_S				; load the ASCII value for S
+0032 AE00 0053
+               			STORE 	TEMP_REG, 	002D				; store the temp reg into scratchpad location (45)
+0034 F400 002D
+               			
+               			LOAD	TEMP_REG,	ASCII_U				; load the ASCII value for U
+0036 AE00 0055
+               			STORE 	TEMP_REG, 	002E				; store the temp reg into scratchpad location (46)
+0038 F400 002E
+               			
+               			LOAD	TEMP_REG,	ASCII_L				; load the ASCII value for L
+003A AE00 004C
+               			STORE 	TEMP_REG, 	002F				; store the temp reg into scratchpad location (47)
+003C F400 002F
+               			
+               			LOAD	TEMP_REG,	ASCII_B				; load the ASCII value for B
+003E AE00 0042
+               			STORE 	TEMP_REG, 	0030				; store the temp reg into scratchpad locaiton (48)
+0040 F400 0030
+               			
+               			LOAD	TEMP_REG, 	ASCII_SPACE			; load the ASCII value for space
+0042 AE00 0020
+               			STORE	TEMP_REG,	0031				; store the temp reg into scratchpad location (49)
+0044 F400 0031
+               			
+               			LOAD	TEMP_REG,	ASCII_C				; load the ASCII value for C
+0046 AE00 0043
+               			STORE 	TEMP_REG, 	0032				; store the temp reg into scratchpad location (50)
+0048 F400 0032
+               			
+               			LOAD	TEMP_REG,	ASCII_E				; load the ASCII value for E
+004A AE00 0045
+               			STORE 	TEMP_REG, 	0033				; store the temp reg into scratchpad location (51)
+004C F400 0033
+               			
+               			LOAD	TEMP_REG,	ASCII_C				; load the ASCII value for C
+004E AE00 0043
+               			STORE 	TEMP_REG, 	0034				; store the temp reg into scratchpad location (52)
+0050 F400 0034
+               			
+               			LOAD	TEMP_REG,	ASCII_S				; load the ASCII value for S
+0052 AE00 0053
+               			STORE 	TEMP_REG, 	0035				; store the temp reg into scratchpad location (53)
+0054 F400 0035
+               			
+               			LOAD	TEMP_REG, 	ASCII_SPACE			; load the ASCII value for space
+0056 AE00 0020
+               			STORE	TEMP_REG,	0036				; store the temp reg into scratchpad location (54)
+0058 F400 0036
+               			
+               			LOAD	TEMP_REG, 	ASCII_FOUR			; load the ASCII value for space
+005A AE00 0034
+               			STORE	TEMP_REG,	0037				; store the temp reg into scratchpad location (55)
+005C F400 0037
+               			
+               			LOAD	TEMP_REG, 	ASCII_SIX			; load the ASCII value for space
+005E AE00 0036
+               			STORE	TEMP_REG,	0038				; store the temp reg into scratchpad location (56)
+0060 F400 0038
+               			
+               			LOAD	TEMP_REG, 	ASCII_ZERO			; load the ASCII value for space
+0062 AE00 0030
+               			STORE	TEMP_REG,	0039				; store the temp reg into scratchpad location (57)
+0064 F400 0039
+               			
+               			LOAD	TEMP_REG,	ASCII_CR			; load the ASCII value for <CR>
+0066 AE00 000D
+               			STORE	TEMP_REG,	003A				; store the temp reg into scratchpad location (58)
+0068 F400 003A
+               			
+               			LOAD	TEMP_REG, 	ASCII_LF			; load the ASCII value for <LF>
+006A AE00 000A
+               			STORE	TEMP_REG,	003B				; store the temp reg into scratchpad location (59)
+006C F400 003B
+               			
+               			LOAD	TEMP_REG,	ASCII_TAB			; load the ASCII value for tab
+006E AE00 0009
+               			STORE	TEMP_REG,	003C				; store the temp reg into scratchpad location (60)
+0070 F400 003C
+               			
+               			LOAD	TEMP_REG,	ASCII_SPACE			; load the ASCII value for space
+0072 AE00 0020
+               			STORE	TEMP_REG,	003D				; store the temp reg into scratchpad location (61)
+0074 F400 003D
+               		
+               			LOAD	TEMP_REG,	ASCII_J				; load the ASCII value for J
+0076 AE00 004A
+               			STORE	TEMP_REG,	003E				; store the temp reg into scratchpad location (62)
+0078 F400 003E
+               			
+               			LOAD	TEMP_REG,	ASCII_O				; load the ASCII value for o
+007A AE00 004F
+               			STORE	TEMP_REG,	003F				; store the temp reg into scratchpad location (63)
+007C F400 003F
+               			
+               			LOAD	TEMP_REG,	ASCII_S				; load the ASCII value for e
+007E AE00 0053
+               			STORE	TEMP_REG,	0040				; store the temp reg into scratchpad location (64)
+0080 F400 0040
+               			
+               			LOAD	TEMP_REG,	ASCII_E				; load the ASCII value for e
+0082 AE00 0045
+               			STORE	TEMP_REG,	0041				; store the temp reg into scratchpad location (65)
+0084 F400 0041
+               			
+               			LOAD	TEMP_REG,	ASCII_SPACE			; load the ASCII value for space
+0086 AE00 0020
+               			STORE	TEMP_REG,	0042				; store the temp reg into scratchpad location (66)
+0088 F400 0042
+               			
+               			LOAD	TEMP_REG,	ASCII_S				; load the ASCII value for S
+008A AE00 0053
+               			STORE	TEMP_REG,	0043				; store the temp reg into scratchpad location (67)
+008C F400 0043
+               			
+               			LOAD	TEMP_REG,	ASCII_O				; load the ASCII value for o
+008E AE00 004F
+               			STORE	TEMP_REG,	0044				; store the temp reg into scratchpad location (68)
+0090 F400 0044
+               			
+               			LOAD	TEMP_REG,	ASCII_T				; load the ASCII value for t
+0092 AE00 0054
+               			STORE	TEMP_REG,	0045				; store the temp reg into scratchpad location (69)
+0094 F400 0045
+               			
+               			LOAD	TEMP_REG,	ASCII_E				; load the ASCII value for e
+0096 AE00 0045
+               			STORE	TEMP_REG,	0046				; store the temp reg into scratchpad location (70)
+0098 F400 0046
+               			
+               			LOAD	TEMP_REG,	ASCII_L				; load the ASCII value for l
+009A AE00 004C
+               			STORE	TEMP_REG,	0047				; store the temp reg into scratchpad location (71)
+009C F400 0047
+               			
+               			LOAD	TEMP_REG,	ASCII_O				; load the ASCII value for o
+009E AE00 004F
+               			STORE	TEMP_REG,	0048				; store the temp reg into scratchpad location (72)
+00A0 F400 0048
+               				
+               			LOAD	TEMP_REG,	ASCII_CR			; load the ASCII value for <CR>
+00A2 AE00 000D
+               			STORE	TEMP_REG,	0049				; store the temp reg into scratchpad location (73)
+00A4 F400 0049
+               			
+               			LOAD	TEMP_REG, 	ASCII_LF			; load the ASCII value for <LF>
+00A6 AE00 000A
+               			STORE	TEMP_REG,	004A				; store the temp reg into scratchpad location (74)
+00A8 F400 004A
+               			
+               			LOAD	TEMP_REG,	ASCII_TAB			; load the ASCII value for tab
+00AA AE00 0009
+               			STORE	TEMP_REG,	004B				; store the temp reg into scratchpad location (75)
+00AC F400 004B
+               			
+               			LOAD	TEMP_REG,	ASCII_SPACE			; load the ASCII value for space
+00AE AE00 0020
+               			STORE	TEMP_REG,	004C				; store the temp reg into scratchpad location (76)
+00B0 F400 004C
+               			
+               			LOAD	TEMP_REG,	ASCII_SPACE			; load the ASCII value for space
+00B2 AE00 0020
+               			STORE	TEMP_REG,	004D				; store the temp reg into scratchpad location (77)
+00B4 F400 004D
+               			
+               			LOAD	TEMP_REG,	ASCII_SPACE			; load the ASCII value for space
+00B6 AE00 0020
+               			STORE	TEMP_REG,	004E				; store the temp reg into scratchpad location (78)
+00B8 F400 004E
+               			
+               			LOAD	TEMP_REG,	ASCII_SPACE			; load the ASCII value for space
+00BA AE00 0020
+               			STORE	TEMP_REG,	004F				; store the temp reg into scratchpad location (79)
+00BC F400 004F
+               			
+               			LOAD	TEMP_REG,	ASCII_U				; load the ASCII value for U
+00BE AE00 0055
+               			STORE	TEMP_REG,	0050				; store the temp reg into scratchpad location (80)
+00C0 F400 0050
+               			
+               			LOAD	TEMP_REG,	ASCII_A				; load the ASCII value for A
+00C2 AE00 0041
+               			STORE	TEMP_REG,	0051				; store the temp reg into scratchpad location (81)
+00C4 F400 0051
+               			
+               			LOAD	TEMP_REG,	ASCII_R				; load the ASCII value for R
+00C6 AE00 0052
+               			STORE	TEMP_REG,	0052				; store the temp reg  into scratchpad location (82)
+00C8 F400 0052
+               			
+               			LOAD	TEMP_REG,	ASCII_T				; load the ASCII value for T
+00CA AE00 0054
+               			STORE	TEMP_REG,	0053				; store the temp reg into scratchpad location (83)
+00CC F400 0053
+               			
+               			LOAD	TEMP_REG,	ASCII_CR			; load the ASCII value for <CR>
+00CE AE00 000D
+               			STORE	TEMP_REG,	0054				; store the temp reg into scratchpad location (84)
+00D0 F400 0054
+               			
+               			LOAD	TEMP_REG, 	ASCII_LF			; load the ASCII value for <LF>
+00D2 AE00 000A
+               			STORE	TEMP_REG,	0055				; store the temp reg into scratchpad location (85)
+00D4 F400 0055
+               				
+               			LOAD	TEMP_REG,	ASCII_SLASH
+00D6 AE00 002F
+               			LOAD	COUNT,		0056				; load register R3 with hex value 86
+00D8 AE03 0056
+               LAST		STORE	TEMP_REG,	COUNT
+7630
+               									
+               			ADD		COUNT,		0001				; increment count to point to the next scratchpad location		
+00DB 8203 0001
+               			
+               			COMP	COUNT,  	007E				; if rX == kk then ZERO = 1; if rx < kk then CARRY = 1
+00DD 9803 007E
+               			JUMPC	LAST							; if CARRY PC <— ADD_SLASH
+00DF A600 00da
+               			
+               			LOAD	TEMP_REG,	ASCII_CR			; load the ASCII value for <CR>
+00E1 AE00 000D
+               			STORE	TEMP_REG,	007F				; store the temp reg into scratchpad location (127)
+00E3 F400 007F
+               			
+               			LOAD	TEMP_REG, 	ASCII_LF			; load the ASCII value for <LF>
+00E5 AE00 000A
+               			STORE	TEMP_REG,	0080				; store the temp reg into scratchpad (location 128) 
+00E7 F400 0080
+               													; end of banner
+               			
+               ;=======================================================
+               ;	Prompt User Subroutine
+               ;	Allows the user to type
+               ;	C:\User>
+               ;=======================================================
+               PROMPT_USER
+               			
+               			LOAD	TEMP_REG,	ASCII_C				; load the ASCII value C
+00E9 AE00 0043
+               			STORE	TEMP_REG,	0081				; store the temp reg intro scratchpad location (129)
+00EB F400 0081
+               			
+               			LOAD	TEMP_REG,	ASCII_COLON			; load the ASCII value for :
+00ED AE00 003A
+               			STORE	TEMP_REG,	0082				; store the temp reg into scratchpad location (130)
+00EF F400 0082
+               			
+               			LOAD	TEMP_REG,	ASCII_B_SLASH		; load the ASCII value for '\'
+00F1 AE00 005C
+               			STORE	TEMP_REG,	0083				; store the temp reg into scratchpad location (131)
+00F3 F400 0083
+               			
+               			LOAD	TEMP_REG,	ASCII_U				; load the ASCII value U
+00F5 AE00 0055
+               			STORE	TEMP_REG,	0084				; store the temp reg into scratchpad location (132)
+00F7 F400 0084
+               
+               			LOAD	TEMP_REG,	ASCII_S				; load the ASCII value S
+00F9 AE00 0053
+               			STORE	TEMP_REG,	0085				; store the temp reg into scratchpad location (133)			
+00FB F400 0085
+               			
+               			LOAD	TEMP_REG,	ASCII_E				; load the ASCII value E
+00FD AE00 0045
+               			STORE	TEMP_REG,	0086				; store the temp reg into scratchpad location (134)
+00FF F400 0086
+               			
+               			LOAD	TEMP_REG,	ASCII_R				; load the ASCII value R
+0101 AE00 0052
+               			STORE	TEMP_REG,	0087				; store the temp reg into scratchpad location (135)
+0103 F400 0087
+               			
+               			LOAD	TEMP_REG,	ASCII_GREATER		; load the ASCII value >
+0105 AE00 003E
+               			STORE	TEMP_REG,	0088				; store the temp reg into scratchpad location (136)
+0107 F400 0088
+               		
+               ;=======================================================
+               ;	TOWN Subroutine
+               ;	Prints the designer's hometown
+               ;	Hometown: Boyle Heights
+               ;=======================================================
+               TOWN
+               			LOAD	TEMP_REG,	ASCII_H				; load the ASCII value T
+0109 AE00 0048
+               			STORE	TEMP_REG,	0089				; store the temp reg into scratchpad location (137)
+010B F400 0089
+               			
+               			LOAD	TEMP_REG,	ASCII_O				; load the ASCII value T
+010D AE00 004F
+               			STORE	TEMP_REG,	008A				; store the temp reg into scratchpad location (138)
+010F F400 008A
+               			
+               			LOAD	TEMP_REG,	ASCII_M				; load the ASCII value T
+0111 AE00 004D
+               			STORE	TEMP_REG,	008B				; store the temp reg into scratchpad location (139)
+0113 F400 008B
+               			
+               			LOAD	TEMP_REG,	ASCII_E				; load the ASCII value T
+0115 AE00 0045
+               			STORE	TEMP_REG,	008C				; store the temp reg into scratchpad location (140)
+0117 F400 008C
+               			
+               			LOAD	TEMP_REG,	ASCII_T				; load the ASCII value T
+0119 AE00 0054
+               			STORE	TEMP_REG,	008D				; store the temp reg into scratchpad location (141)
+011B F400 008D
+               			
+               			LOAD	TEMP_REG,	ASCII_O				; load the ASCII value O
+011D AE00 004F
+               			STORE	TEMP_REG,	008E				; store the temp reg into scratchpad location (142)
+011F F400 008E
+               			
+               			LOAD	TEMP_REG,	ASCII_W				; load the ASCII value W
+0121 AE00 0057
+               			STORE 	TEMP_REG,	008F				; store the temp reg into scratchpad location (143)
+0123 F400 008F
+               						
+               			LOAD 	TEMP_REG,	ASCII_N				; load the ASCII value N
+0125 AE00 004E
+               			STORE	TEMP_REG,	0090				; store the temp reg into scratchpad location (144)
+0127 F400 0090
+               			
+               			LOAD	TEMP_REG,	ASCII_COLON			; load the ASCII value :
+0129 AE00 003A
+               			STORE	TEMP_REG, 	0091				; store the temp reg into scratchpad location (145)
+012B F400 0091
+               			
+               			LOAD	TEMP_REG,	ASCII_SPACE			; load the ASCII value space
+012D AE00 0020
+               			STORE	TEMP_REG,	0092				; store the temp reg into scratchpad location (146)
+012F F400 0092
+               			
+               			LOAD	TEMP_REG,	ASCII_B				; load the ASCII value B
+0131 AE00 0042
+               			STORE	TEMP_REG,	0093				; store the temp reg into scratchpad location (147)
+0133 F400 0093
+               			
+               			LOAD	TEMP_REG,	ASCII_O				; load the ASCII value O
+0135 AE00 004F
+               			STORE	TEMP_REG,	0094				; store the temp reg into scratchpad location (148)
+0137 F400 0094
+               			
+               			LOAD	TEMP_REG,	ASCII_Y				; load the ASCII value Y
+0139 AE00 0059
+               			STORE	TEMP_REG,	0095				; store the temp reg into scratchpad location (149)
+013B F400 0095
+               			
+               			LOAD	TEMP_REG,	ASCII_L				; load the ASCII value L
+013D AE00 004C
+               			STORE	TEMP_REG,	0096				; store the temp reg into scratchpad location (150)
+013F F400 0096
+               			
+               			LOAD	TEMP_REG,	ASCII_E				; load the ASCII value E
+0141 AE00 0045
+               			STORE	TEMP_REG,	0097				; store the temp reg into scratchpad location (151)
+0143 F400 0097
+               			
+               			LOAD	TEMP_REG,	ASCII_SPACE			; load the ASCII value space
+0145 AE00 0020
+               			STORE	TEMP_REG,	0098				; store the temp reg into scratchpad location (152)
+0147 F400 0098
+               			
+               			LOAD	TEMP_REG,	ASCII_H				; load the ASCII value H
+0149 AE00 0048
+               			STORE	TEMP_REG,	0099				; store the temp reg into scratchpad location (153)
+014B F400 0099
+               			
+               			LOAD	TEMP_REG,	ASCII_E				; load the ASCII value E
+014D AE00 0045
+               			STORE	TEMP_REG,	009A				; store the temp reg into scratchpad location (154)
+014F F400 009A
+               			
+               			LOAD	TEMP_REG,	ASCII_I				; load the ASCII value I 
+0151 AE00 0049
+               			STORE	TEMP_REG,	009B				; store the temp reg into scratchpad location (155)
+0153 F400 009B
+               			
+               			LOAD	TEMP_REG,	ASCII_G				; load the ASCII value G
+0155 AE00 0047
+               			STORE	TEMP_REG,	009C				; store the temp reg into scratchpad location (156)
+0157 F400 009C
+               			
+               			LOAD	TEMP_REG,	ASCII_H				; load the ASCII value H
+0159 AE00 0048
+               			STORE	TEMP_REG,	009D				; store the temp reg into scratchpad location (157)
+015B F400 009D
+               			
+               			LOAD	TEMP_REG,	ASCII_T				; load the ASCII value T
+015D AE00 0054
+               			STORE	TEMP_REG,	009E				; store the temp reg into scratchpad location (158)
+015F F400 009E
+               			
+               			LOAD	TEMP_REG,	ASCII_S				; load the ASCII value S
+0161 AE00 0053
+               			STORE	TEMP_REG,	009F				; store the temp reg into scratchpad location (159)
+0163 F400 009F
+               			
+               			LOAD	TEMP_REG,	ASCII_CR			; load the ASCII value CR
+0165 AE00 000D
+               			STORE	TEMP_REG,	00A0				; store the temp reg into scratchpad location (160)
+0167 F400 00A0
+               			
+               			LOAD	TEMP_REG,	ASCII_LF			; load the ASCII value LF
+0169 AE00 000A
+               			STORE	TEMP_REG,	00A1				; store the temp reg into scratchpad location (161)
+016B F400 00A1
+               													; end of town
+               			
+               ;=======================================================
+               ;	Backspace	
+               ;	Allows the user to move the display cursor one 
+               ;	position backwards and deletes the character at 
+               ;	that position
+               ;=======================================================
+               BACKSPACE
+               			LOAD	TEMP_REG,	ASCII_BS			; load the ASCII value for backspace
+016D AE00 0008
+               			STORE	TEMP_REG,	00A2				; store the temp reg into scratchpad location (162)
+016F F400 00A2
+               			
+               			LOAD	TEMP_REG, 	ASCII_SPACE			; load the ASCII value for space
+0171 AE00 0020
+               			STORE	TEMP_REG,	00A3				; store the temp reg into scratchpad location (163)
+0173 F400 00A3
+               			
+               			LOAD	TEMP_REG,	ASCII_BS			; load the ASCII value for backspace
+0175 AE00 0008
+               			STORE	TEMP_REG,	00A4				; store the temp reg into scratchpad (location 164)
+0177 F400 00A4
+               			
+               			RETURN
+0179 3A00               		 
+               ;=======================================================
+               ;	Carriage Return and line feed
+               ;	They're used to note the termination of a line
+               ;=======================================================
+               CRLF		
+               			LOAD	TEMP_REG,	ASCII_CR			; load the ASCII value for <CR>
+017A AE00 000D
+               			STORE	TEMP_REG,	00A5				; store the temp reg into scratchpad location (165)
+017C F400 00A5
+               			
+               			LOAD	TEMP_REG,	ASCII_LF			; load the ASCII value for <LF>
+017E AE00 000A
+               			STORE	TEMP_REG,	00A6				; store the temp reg into scratchpad location (166)
+0180 F400 00A6
+               			
+               			RETURN
+0182 3A00               		
+               ;=======================================================
+               ;	TX Subroutine
+               ;=======================================================
+               TX
+               
+               			COMP	CURRENT_CASE, ZERO				; compare register R5 with literal 0000
+0183 9805 0000
+               			RETURNZ									; if ZERO return from subroutine
+0185 4000               
+               			FETCH	TEMP_REG,	POINTER				; read scratchpad RAM location into register R0
+7210
+               			OUTPUT	TEMP_REG,	ZERO				; Write register R0 to port 0000
+0187 B800 0000
+               			ADD		POINTER,	ONE	
+0189 8201 0001
+               			
+               			COMP	CURRENT_CASE, 0001				; compare register R5 with 0001 (case 1)
+018B 9805 0001
+               			JUMPZ	SHOW_BANNER						; jump if ZERO to SHOW_BANNER
+018D AA00 01a4
+               			
+               			COMP	CURRENT_CASE, 0002				; compare register R5 with 0002 (case 2)
+018F 9805 0002
+               			JUMPZ	SHOW_PROMPT_USER				; jump if ZERO to SHOW_PROMPT_USER
+0191 AA00 01aa
+               			
+               			COMP	CURRENT_CASE, 0003				; compare register R5 with 0003	(case 3)
+0193 9805 0003
+               			JUMPZ	SHOW_TOWN						; jump if ZERO to SHOW_TOWN
+0195 AA00 01b0
+               			
+               			COMP	CURRENT_CASE, 0004				; compare register R5 with 0004 (case 4)
+0197 9805 0004
+               			JUMPZ	SHOW_BACKSPACE					; jump if ZERO to SHOW_BACKSPACE
+0199 AA00 01b8
+               			
+               			COMP	CURRENT_CASE, 0005				; compare register R5 with 0005 (case 5)
+019B 9805 0005
+               			JUMPZ	SHOW_CRLF						; jump if ZERO to SHOW_CRLF
+019D AA00 01be
+               			
+               			COMP	CURRENT_CASE, 0006				; compare register R5 with 0006	(case 6)			
+019F 9805 0006
+               			JUMPZ	SHOW_COUNT						; jump if ZERO to SHOW_COUNT
+01A1 AA00 01c6
+               			
+               			RETURN
+01A3 3A00               			
+               SHOW_BANNER
+               
+               			COMP	POINTER,	  0081				; compare register R1 with 0081
+01A4 9801 0081
+               			RETURNC									; if CARRY return from subroutine
+01A6 3C00               			LOAD	CURRENT_CASE, 0002				; load register R5 with 0002 
+01A7 AE05 0002
+               			RETURN									; unconditionally return from subroutine
+01A9 3A00               			
+               
+               SHOW_PROMPT_USER
+               			
+               			COMP	POINTER,	  0089				; compare register R1 with 0089
+01AA 9801 0089
+               			RETURNC									; if CARRY return from subroutine
+01AC 3C00               			LOAD	CURRENT_CASE, 0000				; load register R5 with 0000
+01AD AE05 0000
+               			RETURN									; Unconditionally return from subroutine
+01AF 3A00               			
+               SHOW_TOWN
+               			
+               			COMP	POINTER, 	  00A2				; compare register R1 with 00A1
+01B0 9801 00A2
+               			RETURNC									; if CARRY return from subroutine
+01B2 3C00               			LOAD	POINTER,	  0081				; load register R1 with 0080
+01B3 AE01 0081
+               			LOAD	CURRENT_CASE, 0002				; load register R5 with 0002
+01B5 AE05 0002
+               			RETURN									; unconditionally return from subroutine
+01B7 3A00               			
+               SHOW_BACKSPACE
+               			
+               			COMP	POINTER,	  00A5				; compare register R1 with 00A4  
+01B8 9801 00A5
+               			RETURNC									; if CARRY return from subroutine
+01BA 3C00               			LOAD	CURRENT_CASE, 0000				; load register R5 with 0000 (do nothing)
+01BB AE05 0000
+               			RETURN									; unconditionally return from subroutine
+01BD 3A00               			
+               SHOW_CRLF
+               			
+               			COMP	POINTER, 	  00A7				; compare register R1 with 00A6
+01BE 9801 00A7
+               			RETURNC									; if CARRY return from subroutine
+01C0 3C00               			LOAD	POINTER,      0081				; load register R1 with 0081
+01C1 AE01 0081
+               			LOAD	CURRENT_CASE, 0002				; load register R5 with 0002
+01C3 AE05 0002
+               			RETURN
+01C5 3A00               			
+               SHOW_COUNT
+               
+               			COMP	POINTER,	  00A9				; compare register R1 with 00A6 	
+01C6 9801 00A9
+               			RETURNC									; if CARRY return from subroutine
+01C8 3C00               			LOAD	POINTER,	  00A5				; load register R1 with 00A5
+01C9 AE01 00A5
+               			LOAD	CURRENT_CASE, 0005				; load register R5 with literal kk
+01CB AE05 0005
+               			RETURN
+01CD 3A00               			
+               ;=======================================================
+               ;	RX Subroutine
+               ;=======================================================
+               RX
+               
+               			COMP	CURRENT_CASE,	ZERO			; compare register R5 with 0000
+01CE 9805 0000
+               			RETURNNZ								; if NOT ZERO return from subroutine
+01D0 4200               			
+               			INPUT	STORE_DATA,		ZERO			; Read input port 0000 into register R7
+01D1 A207 0000
+               			COMP	STORE_DATA,		ZERO
+01D3 9807 0000
+               			RETURNZ									; if ZERO return from subroutine
+01D5 4000               			
+               			COMP	STORE_DATA,		ASCII_ASTERISK  ; compare register R7 with ASCII asterisk
+01D6 9807 002A
+               			JUMPZ	RECEIVE_TOWN					; jump if ZERO to RECEIVE_TOWN
+01D8 AA00 01ef
+               			
+               			COMP	STORE_DATA,		ASCII_BS		; compare register R7 with ASCII backspace
+01DA 9807 0008
+               			JUMPZ	RECEIVE_BACKSPACE				; jump if ZERO to RECEIVE_BACKSPACE
+01DC AA00 01fa
+               			
+               			COMP	STORE_DATA,		ASCII_CR		; compare register R7 with ASCII CR
+01DE 9807 000D
+               			JUMPZ	RECEIVE_CRLF					; jump if ZERO to RECEIVE_CRLF
+01E0 AA00 0208
+               			
+               			COMP	STORE_DATA,		ASCII_AT		; compare register R7 with ASCII @
+01E2 9807 0040
+               			JUMPZ	RECIEVE_AT						; jump if ZERO to RECEIVE_AT
+01E4 AA00 0213
+               			
+               			; echoing used to display char count
+               			ADD		CHAR_COUNT,		0001
+01E6 8206 0001
+               			OUTPUT	STORE_DATA,		ZERO
+01E8 B807 0000
+               			COMP	CHAR_COUNT,		0029
+01EA 9806 0029
+               			JUMPZ	RECEIVE_CRLF
+01EC AA00 0208
+               		
+               			RETURN
+01EE 3A00               			
+               RECEIVE_TOWN
+               			
+               			LOAD	CURRENT_CASE, 0003				; load register R5 with literal kk
+01EF AE05 0003
+               			LOAD	POINTER,	  0089				; beginning of hometown
+01F1 AE01 0089
+               			LOAD	TEMP_REG,	  0000				; load register R0 with 0000
+01F3 AE00 0000
+               			OUTPUT	TEMP_REG,	  0000
+01F5 B800 0000
+               			LOAD	CHAR_COUNT,	  0000
+01F7 AE06 0000
+               			RETURN									; unconditionally return from subroutine
+01F9 3A00               			
+               RECEIVE_BACKSPACE
+               			
+               			COMP	CHAR_COUNT,	  0000
+01FA 9806 0000
+               			RETURNZ									; if ZERO return from subroutine
+01FC 4000               			LOAD	CURRENT_CASE, 0004				; load register R5
+01FD AE05 0004
+               			LOAD	POINTER,	  00A2				; start bs
+01FF AE01 00A2
+               			LOAD	TEMP_REG,	  0000				; load register R0 with 0000
+0201 AE00 0000
+               			OUTPUT	TEMP_REG,	  0000
+0203 B800 0000
+               			SUB		CHAR_COUNT,	  0001
+0205 DC06 0001
+               			RETURN									; unconditionally return from subroutine
+0207 3A00               
+               RECEIVE_CRLF
+               			
+               			LOAD	CURRENT_CASE, 0005				; load register R5 with literal kk
+0208 AE05 0005
+               			LOAD	POINTER,	  00A5				; start crlf
+020A AE01 00A5
+               			LOAD	TEMP_REG,	  0000				; load register R0 with 0000
+020C AE00 0000
+               			OUTPUT	TEMP_REG,	  0000
+020E B800 0000
+               			LOAD	CHAR_COUNT,   0000
+0210 AE06 0000
+               			RETURN									; unconditionally return from subroutine
+0212 3A00               
+               RECIEVE_AT
+               			
+               			CALL	BinToASC						; Unconditionally call subroutine BIN_TO_ASCII
+0213 8E00 0220
+               			LOAD	CURRENT_CASE, 0006				; load register R5 with literal kk
+0215 AE05 0006
+               			LOAD	Pointer,      00A7
+0217 AE01 00A7
+               			LOAD	TEMP_REG,	  0000				; load register R0 with 0000
+0219 AE00 0000
+               			OUTPUT	TEMP_REG,	  0000
+021B B800 0000
+               			LOAD	CHAR_COUNT,	  0000
+021D AE06 0000
+               			RETURN									; unconditionally return from subroutine
+021F 3A00               
+               ;=======================================================
+               ;	BIN_TO_ASCII
+               ;=======================================================
+               BinToASC
+                       LOAD   	RE, CHAR_COUNT						; load register RE with contents of register R6 				
+306E
+               		
+               		LOAD	RD, 000A							; load register RD with 000A(10)								
+0221 AE0D 000A
+               		CALL	FINDIT								; suspend current execution and branch to the FINDIT routine
+0223 8E00 022e
+               		ADD		RB, 0030							; add register RB with 0x30										
+0225 820B 0030
+               		STORE	RB, 00A7							; write register RB to scratchpad RAM location 0x15 <- change this!
+0227 F40B 00A7
+               		
+               		ADD		RE, 0030							; add register RE with 0x30	
+0229 820E 0030
+               		STORE	RE, 00A8							; write register RB to scratchpad RAM location 0x16 <- change this!!
+022B F40E 00A8
+               		
+               		RETURN
+022D 3A00               		
+               ;=======================================================
+               ;	FInd It Routine
+               ;=======================================================
+               FINDIT
+               		LOAD	RB, ZERO							; load register RB with 0
+022E AE0B 0000
+               		
+               REPEAT	SUB		RE, RD								; subtract register RD from register RE 						
+5EDE
+               		JUMPC	FOUNDIT								; jump if CARRY to FOUNDIT										
+0231 A600 0237
+               		ADD		RB, 0001							; add register RB with 1										
+0233 820B 0001
+               		JUMP	REPEAT								; unconditionally jump to REPEAT								
+0235 A400 0230
+               FOUNDIT
+               		ADD		RE, RD								; add register RE with RD										
+04DE
+               		
+               		RETURN										; unconditionally return from subroutine						
+0238 3A00               
+               ;=======================================================
+               ;	ISR
+               ;=======================================================
+               		ADDRESS 0300
+               ISR  
+               		INPUT	UART_STATUS,	PORT				; Read input port 0001 into register R4
+0300 A204 0001
+               		AND		UART_STATUS,	0003				; check Tx ready and Rx ready
+0302 8A04 0003
+               		
+               		COMP	UART_STATUS,	0003				; if tx ready and rx ready are high
+0304 9804 0003
+               		JUMPZ	BOTH_RX_TX							; jump if ZERO to aaa
+0306 AA00 0311
+               		
+               		COMP	UART_STATUS,	TX_RDY				; if tx ready is high
+0308 9804 0002
+               		CALLZ	TX									; if ZERO call subroutine at aaa
+030A 9400 0183
+               		
+               		COMP	UART_STATUS,	RX_RDY				; if rx ready is high
+030C 9804 0001
+               		CALLZ	RX									; if ZERO call subroutine at aaa
+030E 9400 01ce
+               		
+               		RETEN
+0310 4600               		
+               BOTH_RX_TX
+               		
+               		CALL	TX									; Unconditionally call subroutine TX
+0311 8E00 0183
+               		CALL	RX									; Unconditionally call subroutine RX
+0313 8E00 01ce
+               		
+               		RETEN
+0315 4600               		
+               ;=======================================================
+               ;	Main Loop
+               ;	main loop is where processor spends most of its time
+               ;=======================================================
+               MAIN    
+               		; update LEDs
+               		JUMP	MAIN
+0316 A400 0316
+               
+               
+               ;=======================================================
+               ;	ISR vectored through 0FFE
+               ;=======================================================
+                       ADDRESS 0FFE
+               ENDIT   
+               		JUMP ISR
+0FFE A400 0300
+               
+                       END
+               
+               

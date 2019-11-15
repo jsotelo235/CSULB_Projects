@@ -1,0 +1,8 @@
+verilog work "reg16.v"
+verilog work "dec_3to8.v"
+verilog work "reg_File.v"
+verilog work "alu16.v"
+verilog work "pc.v"
+verilog work "ir.v"
+verilog work "integer_datapath.v"
+verilog work "cpu_eu.v"

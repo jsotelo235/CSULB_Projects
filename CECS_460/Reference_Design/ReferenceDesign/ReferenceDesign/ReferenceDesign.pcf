@@ -1,0 +1,349 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Dec 07 13:44:25 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "rst" LOCATE = SITE "N17" LEVEL 1;
+COMP "leds<10>" LOCATE = SITE "U14" LEVEL 1;
+COMP "leds<13>" LOCATE = SITE "V14" LEVEL 1;
+COMP "leds<14>" LOCATE = SITE "V12" LEVEL 1;
+COMP "leds<11>" LOCATE = SITE "T16" LEVEL 1;
+COMP "leds<12>" LOCATE = SITE "V15" LEVEL 1;
+COMP "leds<15>" LOCATE = SITE "V11" LEVEL 1;
+COMP "swin" LOCATE = SITE "M18" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "R18" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "N14" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "J13" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "K15" LEVEL 1;
+COMP "leds<0>" LOCATE = SITE "H17" LEVEL 1;
+COMP "leds<9>" LOCATE = SITE "T15" LEVEL 1;
+COMP "leds<8>" LOCATE = SITE "V16" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "U16" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "U17" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "V17" LEVEL 1;
+COMP "clk" LOCATE = SITE "E3" LEVEL 1;
+PIN
+        tbt/tramelblaze/sr/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>
+        = BEL
+        "tbt/tramelblaze/sr/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKARDCLK;
+PIN
+        tbt/tramelblaze/sr/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>
+        = BEL
+        "tbt/tramelblaze/sr/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKBWRCLK;
+PIN
+        tbt/tramelblaze/stkr/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>
+        = BEL
+        "tbt/tramelblaze/stkr/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKARDCLK;
+PIN
+        tbt/tramelblaze/stkr/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>
+        = BEL
+        "tbt/tramelblaze/stkr/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram"
+        PINNAME CLKBWRCLK;
+PIN
+        tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>
+        = BEL
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKU;
+PIN
+        tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>
+        = BEL
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKL;
+PIN
+        tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>
+        = BEL
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKU;
+PIN
+        tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>
+        = BEL
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKL;
+PIN
+        tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>
+        = BEL
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKU;
+PIN
+        tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>
+        = BEL
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKL;
+PIN
+        tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>
+        = BEL
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKU;
+PIN
+        tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>
+        = BEL
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKL;
+TIMEGRP sys_clk_pin = BEL "rQ_0" BEL "rQ_1" BEL "interrupt" BEL "pedQ_0" BEL
+        "pedQ_1" BEL "leds_0" BEL "leds_1" BEL "leds_2" BEL "leds_3" BEL
+        "leds_4" BEL "leds_5" BEL "leds_6" BEL "leds_7" BEL "leds_8" BEL
+        "leds_9" BEL "leds_10" BEL "leds_11" BEL "leds_12" BEL "leds_13" BEL
+        "leds_14" BEL "leds_15" BEL "present_FSM_FFd3" BEL "present_FSM_FFd2"
+        BEL "counter_0" BEL "counter_1" BEL "counter_2" BEL "counter_3" BEL
+        "counter_4" BEL "counter_5" BEL "counter_6" BEL "counter_7" BEL
+        "counter_8" BEL "counter_9" BEL "counter_10" BEL "counter_11" BEL
+        "counter_12" BEL "counter_13" BEL "counter_14" BEL "counter_15" BEL
+        "counter_16" BEL "counter_17" BEL "counter_18" BEL "present_FSM_FFd1"
+        BEL "tbt/tramelblaze/stateQ_FSM_FFd1" BEL
+        "tbt/tramelblaze/stateQ_FSM_FFd2" BEL
+        "tbt/tramelblaze/stateQ_FSM_FFd4" BEL
+        "tbt/tramelblaze/stateQ_FSM_FFd3" BEL "tbt/tramelblaze/pc_15" BEL
+        "tbt/tramelblaze/pc_14" BEL "tbt/tramelblaze/pc_13" BEL
+        "tbt/tramelblaze/pc_12" BEL "tbt/tramelblaze/pc_11" BEL
+        "tbt/tramelblaze/pc_10" BEL "tbt/tramelblaze/pc_9" BEL
+        "tbt/tramelblaze/pc_8" BEL "tbt/tramelblaze/pc_7" BEL
+        "tbt/tramelblaze/pc_6" BEL "tbt/tramelblaze/pc_5" BEL
+        "tbt/tramelblaze/pc_4" BEL "tbt/tramelblaze/pc_3" BEL
+        "tbt/tramelblaze/pc_2" BEL "tbt/tramelblaze/pc_1" BEL
+        "tbt/tramelblaze/pc_0" BEL "tbt/tramelblaze/sel_pcQ_1" BEL
+        "tbt/tramelblaze/sel_pcQ_0" BEL "tbt/tramelblaze/inst_reg_15" BEL
+        "tbt/tramelblaze/inst_reg_14" BEL "tbt/tramelblaze/inst_reg_13" BEL
+        "tbt/tramelblaze/inst_reg_12" BEL "tbt/tramelblaze/inst_reg_11" BEL
+        "tbt/tramelblaze/inst_reg_10" BEL "tbt/tramelblaze/inst_reg_9" BEL
+        "tbt/tramelblaze/inst_reg_8" BEL "tbt/tramelblaze/inst_reg_7" BEL
+        "tbt/tramelblaze/inst_reg_6" BEL "tbt/tramelblaze/inst_reg_5" BEL
+        "tbt/tramelblaze/inst_reg_4" BEL "tbt/tramelblaze/inst_reg_3" BEL
+        "tbt/tramelblaze/inst_reg_2" BEL "tbt/tramelblaze/inst_reg_1" BEL
+        "tbt/tramelblaze/inst_reg_0" BEL "tbt/tramelblaze/ldirQ" BEL
+        "tbt/tramelblaze/carryQ" BEL "tbt/tramelblaze/regfile_15_255" BEL
+        "tbt/tramelblaze/regfile_15_254" BEL "tbt/tramelblaze/regfile_15_253"
+        BEL "tbt/tramelblaze/regfile_15_252" BEL
+        "tbt/tramelblaze/regfile_15_251" BEL "tbt/tramelblaze/regfile_15_250"
+        BEL "tbt/tramelblaze/regfile_15_249" BEL
+        "tbt/tramelblaze/regfile_15_248" BEL "tbt/tramelblaze/regfile_15_247"
+        BEL "tbt/tramelblaze/regfile_15_246" BEL
+        "tbt/tramelblaze/regfile_15_245" BEL "tbt/tramelblaze/regfile_15_244"
+        BEL "tbt/tramelblaze/regfile_15_243" BEL
+        "tbt/tramelblaze/regfile_15_242" BEL "tbt/tramelblaze/regfile_15_241"
+        BEL "tbt/tramelblaze/regfile_15_240" BEL
+        "tbt/tramelblaze/regfile_15_239" BEL "tbt/tramelblaze/regfile_15_238"
+        BEL "tbt/tramelblaze/regfile_15_237" BEL
+        "tbt/tramelblaze/regfile_15_236" BEL "tbt/tramelblaze/regfile_15_235"
+        BEL "tbt/tramelblaze/regfile_15_234" BEL
+        "tbt/tramelblaze/regfile_15_233" BEL "tbt/tramelblaze/regfile_15_232"
+        BEL "tbt/tramelblaze/regfile_15_231" BEL
+        "tbt/tramelblaze/regfile_15_230" BEL "tbt/tramelblaze/regfile_15_229"
+        BEL "tbt/tramelblaze/regfile_15_228" BEL
+        "tbt/tramelblaze/regfile_15_227" BEL "tbt/tramelblaze/regfile_15_226"
+        BEL "tbt/tramelblaze/regfile_15_225" BEL
+        "tbt/tramelblaze/regfile_15_224" BEL "tbt/tramelblaze/regfile_15_223"
+        BEL "tbt/tramelblaze/regfile_15_222" BEL
+        "tbt/tramelblaze/regfile_15_221" BEL "tbt/tramelblaze/regfile_15_220"
+        BEL "tbt/tramelblaze/regfile_15_219" BEL
+        "tbt/tramelblaze/regfile_15_218" BEL "tbt/tramelblaze/regfile_15_217"
+        BEL "tbt/tramelblaze/regfile_15_216" BEL
+        "tbt/tramelblaze/regfile_15_215" BEL "tbt/tramelblaze/regfile_15_214"
+        BEL "tbt/tramelblaze/regfile_15_213" BEL
+        "tbt/tramelblaze/regfile_15_212" BEL "tbt/tramelblaze/regfile_15_211"
+        BEL "tbt/tramelblaze/regfile_15_210" BEL
+        "tbt/tramelblaze/regfile_15_209" BEL "tbt/tramelblaze/regfile_15_208"
+        BEL "tbt/tramelblaze/regfile_15_207" BEL
+        "tbt/tramelblaze/regfile_15_206" BEL "tbt/tramelblaze/regfile_15_205"
+        BEL "tbt/tramelblaze/regfile_15_204" BEL
+        "tbt/tramelblaze/regfile_15_203" BEL "tbt/tramelblaze/regfile_15_202"
+        BEL "tbt/tramelblaze/regfile_15_201" BEL
+        "tbt/tramelblaze/regfile_15_200" BEL "tbt/tramelblaze/regfile_15_199"
+        BEL "tbt/tramelblaze/regfile_15_198" BEL
+        "tbt/tramelblaze/regfile_15_197" BEL "tbt/tramelblaze/regfile_15_196"
+        BEL "tbt/tramelblaze/regfile_15_195" BEL
+        "tbt/tramelblaze/regfile_15_194" BEL "tbt/tramelblaze/regfile_15_193"
+        BEL "tbt/tramelblaze/regfile_15_192" BEL
+        "tbt/tramelblaze/regfile_15_191" BEL "tbt/tramelblaze/regfile_15_190"
+        BEL "tbt/tramelblaze/regfile_15_189" BEL
+        "tbt/tramelblaze/regfile_15_188" BEL "tbt/tramelblaze/regfile_15_187"
+        BEL "tbt/tramelblaze/regfile_15_186" BEL
+        "tbt/tramelblaze/regfile_15_185" BEL "tbt/tramelblaze/regfile_15_184"
+        BEL "tbt/tramelblaze/regfile_15_183" BEL
+        "tbt/tramelblaze/regfile_15_182" BEL "tbt/tramelblaze/regfile_15_181"
+        BEL "tbt/tramelblaze/regfile_15_180" BEL
+        "tbt/tramelblaze/regfile_15_179" BEL "tbt/tramelblaze/regfile_15_178"
+        BEL "tbt/tramelblaze/regfile_15_177" BEL
+        "tbt/tramelblaze/regfile_15_176" BEL "tbt/tramelblaze/regfile_15_175"
+        BEL "tbt/tramelblaze/regfile_15_174" BEL
+        "tbt/tramelblaze/regfile_15_173" BEL "tbt/tramelblaze/regfile_15_172"
+        BEL "tbt/tramelblaze/regfile_15_171" BEL
+        "tbt/tramelblaze/regfile_15_170" BEL "tbt/tramelblaze/regfile_15_169"
+        BEL "tbt/tramelblaze/regfile_15_168" BEL
+        "tbt/tramelblaze/regfile_15_167" BEL "tbt/tramelblaze/regfile_15_166"
+        BEL "tbt/tramelblaze/regfile_15_165" BEL
+        "tbt/tramelblaze/regfile_15_164" BEL "tbt/tramelblaze/regfile_15_163"
+        BEL "tbt/tramelblaze/regfile_15_162" BEL
+        "tbt/tramelblaze/regfile_15_161" BEL "tbt/tramelblaze/regfile_15_160"
+        BEL "tbt/tramelblaze/regfile_15_159" BEL
+        "tbt/tramelblaze/regfile_15_158" BEL "tbt/tramelblaze/regfile_15_157"
+        BEL "tbt/tramelblaze/regfile_15_156" BEL
+        "tbt/tramelblaze/regfile_15_155" BEL "tbt/tramelblaze/regfile_15_154"
+        BEL "tbt/tramelblaze/regfile_15_153" BEL
+        "tbt/tramelblaze/regfile_15_152" BEL "tbt/tramelblaze/regfile_15_151"
+        BEL "tbt/tramelblaze/regfile_15_150" BEL
+        "tbt/tramelblaze/regfile_15_149" BEL "tbt/tramelblaze/regfile_15_148"
+        BEL "tbt/tramelblaze/regfile_15_147" BEL
+        "tbt/tramelblaze/regfile_15_146" BEL "tbt/tramelblaze/regfile_15_145"
+        BEL "tbt/tramelblaze/regfile_15_144" BEL
+        "tbt/tramelblaze/regfile_15_143" BEL "tbt/tramelblaze/regfile_15_142"
+        BEL "tbt/tramelblaze/regfile_15_141" BEL
+        "tbt/tramelblaze/regfile_15_140" BEL "tbt/tramelblaze/regfile_15_139"
+        BEL "tbt/tramelblaze/regfile_15_138" BEL
+        "tbt/tramelblaze/regfile_15_137" BEL "tbt/tramelblaze/regfile_15_136"
+        BEL "tbt/tramelblaze/regfile_15_135" BEL
+        "tbt/tramelblaze/regfile_15_134" BEL "tbt/tramelblaze/regfile_15_133"
+        BEL "tbt/tramelblaze/regfile_15_132" BEL
+        "tbt/tramelblaze/regfile_15_131" BEL "tbt/tramelblaze/regfile_15_130"
+        BEL "tbt/tramelblaze/regfile_15_129" BEL
+        "tbt/tramelblaze/regfile_15_128" BEL "tbt/tramelblaze/regfile_15_127"
+        BEL "tbt/tramelblaze/regfile_15_126" BEL
+        "tbt/tramelblaze/regfile_15_125" BEL "tbt/tramelblaze/regfile_15_124"
+        BEL "tbt/tramelblaze/regfile_15_123" BEL
+        "tbt/tramelblaze/regfile_15_122" BEL "tbt/tramelblaze/regfile_15_121"
+        BEL "tbt/tramelblaze/regfile_15_120" BEL
+        "tbt/tramelblaze/regfile_15_119" BEL "tbt/tramelblaze/regfile_15_118"
+        BEL "tbt/tramelblaze/regfile_15_117" BEL
+        "tbt/tramelblaze/regfile_15_116" BEL "tbt/tramelblaze/regfile_15_115"
+        BEL "tbt/tramelblaze/regfile_15_114" BEL
+        "tbt/tramelblaze/regfile_15_113" BEL "tbt/tramelblaze/regfile_15_112"
+        BEL "tbt/tramelblaze/regfile_15_111" BEL
+        "tbt/tramelblaze/regfile_15_110" BEL "tbt/tramelblaze/regfile_15_109"
+        BEL "tbt/tramelblaze/regfile_15_108" BEL
+        "tbt/tramelblaze/regfile_15_107" BEL "tbt/tramelblaze/regfile_15_106"
+        BEL "tbt/tramelblaze/regfile_15_105" BEL
+        "tbt/tramelblaze/regfile_15_104" BEL "tbt/tramelblaze/regfile_15_103"
+        BEL "tbt/tramelblaze/regfile_15_102" BEL
+        "tbt/tramelblaze/regfile_15_101" BEL "tbt/tramelblaze/regfile_15_100"
+        BEL "tbt/tramelblaze/regfile_15_99" BEL
+        "tbt/tramelblaze/regfile_15_98" BEL "tbt/tramelblaze/regfile_15_97"
+        BEL "tbt/tramelblaze/regfile_15_96" BEL
+        "tbt/tramelblaze/regfile_15_95" BEL "tbt/tramelblaze/regfile_15_94"
+        BEL "tbt/tramelblaze/regfile_15_93" BEL
+        "tbt/tramelblaze/regfile_15_92" BEL "tbt/tramelblaze/regfile_15_91"
+        BEL "tbt/tramelblaze/regfile_15_90" BEL
+        "tbt/tramelblaze/regfile_15_89" BEL "tbt/tramelblaze/regfile_15_88"
+        BEL "tbt/tramelblaze/regfile_15_87" BEL
+        "tbt/tramelblaze/regfile_15_86" BEL "tbt/tramelblaze/regfile_15_85"
+        BEL "tbt/tramelblaze/regfile_15_84" BEL
+        "tbt/tramelblaze/regfile_15_83" BEL "tbt/tramelblaze/regfile_15_82"
+        BEL "tbt/tramelblaze/regfile_15_81" BEL
+        "tbt/tramelblaze/regfile_15_80" BEL "tbt/tramelblaze/regfile_15_79"
+        BEL "tbt/tramelblaze/regfile_15_78" BEL
+        "tbt/tramelblaze/regfile_15_77" BEL "tbt/tramelblaze/regfile_15_76"
+        BEL "tbt/tramelblaze/regfile_15_75" BEL
+        "tbt/tramelblaze/regfile_15_74" BEL "tbt/tramelblaze/regfile_15_73"
+        BEL "tbt/tramelblaze/regfile_15_72" BEL
+        "tbt/tramelblaze/regfile_15_71" BEL "tbt/tramelblaze/regfile_15_70"
+        BEL "tbt/tramelblaze/regfile_15_69" BEL
+        "tbt/tramelblaze/regfile_15_68" BEL "tbt/tramelblaze/regfile_15_67"
+        BEL "tbt/tramelblaze/regfile_15_66" BEL
+        "tbt/tramelblaze/regfile_15_65" BEL "tbt/tramelblaze/regfile_15_64"
+        BEL "tbt/tramelblaze/regfile_15_63" BEL
+        "tbt/tramelblaze/regfile_15_62" BEL "tbt/tramelblaze/regfile_15_61"
+        BEL "tbt/tramelblaze/regfile_15_60" BEL
+        "tbt/tramelblaze/regfile_15_59" BEL "tbt/tramelblaze/regfile_15_58"
+        BEL "tbt/tramelblaze/regfile_15_57" BEL
+        "tbt/tramelblaze/regfile_15_56" BEL "tbt/tramelblaze/regfile_15_55"
+        BEL "tbt/tramelblaze/regfile_15_54" BEL
+        "tbt/tramelblaze/regfile_15_53" BEL "tbt/tramelblaze/regfile_15_52"
+        BEL "tbt/tramelblaze/regfile_15_51" BEL
+        "tbt/tramelblaze/regfile_15_50" BEL "tbt/tramelblaze/regfile_15_49"
+        BEL "tbt/tramelblaze/regfile_15_48" BEL
+        "tbt/tramelblaze/regfile_15_47" BEL "tbt/tramelblaze/regfile_15_46"
+        BEL "tbt/tramelblaze/regfile_15_45" BEL
+        "tbt/tramelblaze/regfile_15_44" BEL "tbt/tramelblaze/regfile_15_43"
+        BEL "tbt/tramelblaze/regfile_15_42" BEL
+        "tbt/tramelblaze/regfile_15_41" BEL "tbt/tramelblaze/regfile_15_40"
+        BEL "tbt/tramelblaze/regfile_15_39" BEL
+        "tbt/tramelblaze/regfile_15_38" BEL "tbt/tramelblaze/regfile_15_37"
+        BEL "tbt/tramelblaze/regfile_15_36" BEL
+        "tbt/tramelblaze/regfile_15_35" BEL "tbt/tramelblaze/regfile_15_34"
+        BEL "tbt/tramelblaze/regfile_15_33" BEL
+        "tbt/tramelblaze/regfile_15_32" BEL "tbt/tramelblaze/regfile_15_31"
+        BEL "tbt/tramelblaze/regfile_15_30" BEL
+        "tbt/tramelblaze/regfile_15_29" BEL "tbt/tramelblaze/regfile_15_28"
+        BEL "tbt/tramelblaze/regfile_15_27" BEL
+        "tbt/tramelblaze/regfile_15_26" BEL "tbt/tramelblaze/regfile_15_25"
+        BEL "tbt/tramelblaze/regfile_15_24" BEL
+        "tbt/tramelblaze/regfile_15_23" BEL "tbt/tramelblaze/regfile_15_22"
+        BEL "tbt/tramelblaze/regfile_15_21" BEL
+        "tbt/tramelblaze/regfile_15_20" BEL "tbt/tramelblaze/regfile_15_19"
+        BEL "tbt/tramelblaze/regfile_15_18" BEL
+        "tbt/tramelblaze/regfile_15_17" BEL "tbt/tramelblaze/regfile_15_16"
+        BEL "tbt/tramelblaze/regfile_15_15" BEL
+        "tbt/tramelblaze/regfile_15_14" BEL "tbt/tramelblaze/regfile_15_13"
+        BEL "tbt/tramelblaze/regfile_15_12" BEL
+        "tbt/tramelblaze/regfile_15_11" BEL "tbt/tramelblaze/regfile_15_10"
+        BEL "tbt/tramelblaze/regfile_15_9" BEL "tbt/tramelblaze/regfile_15_8"
+        BEL "tbt/tramelblaze/regfile_15_7" BEL "tbt/tramelblaze/regfile_15_6"
+        BEL "tbt/tramelblaze/regfile_15_5" BEL "tbt/tramelblaze/regfile_15_4"
+        BEL "tbt/tramelblaze/regfile_15_3" BEL "tbt/tramelblaze/regfile_15_2"
+        BEL "tbt/tramelblaze/regfile_15_1" BEL "tbt/tramelblaze/regfile_15_0"
+        BEL "tbt/tramelblaze/sel_rfwQ_2" BEL "tbt/tramelblaze/sel_rfwQ_1" BEL
+        "tbt/tramelblaze/sel_rfwQ_0" BEL "tbt/tramelblaze/ldpcQ" BEL
+        "tbt/tramelblaze/writestrobeQ" BEL "tbt/tramelblaze/zeroQ" BEL
+        "tbt/tramelblaze/stackPointQ_6" BEL "tbt/tramelblaze/stackPointQ_5"
+        BEL "tbt/tramelblaze/stackPointQ_4" BEL
+        "tbt/tramelblaze/stackPointQ_3" BEL "tbt/tramelblaze/stackPointQ_2"
+        BEL "tbt/tramelblaze/stackPointQ_1" BEL
+        "tbt/tramelblaze/stackPointQ_0" BEL "tbt/tramelblaze/zeroPQ" BEL
+        "tbt/tramelblaze/carryPQ" BEL "tbt/tramelblaze/alu_opQ_4" BEL
+        "tbt/tramelblaze/alu_opQ_3" BEL "tbt/tramelblaze/alu_opQ_2" BEL
+        "tbt/tramelblaze/alu_opQ_1" BEL "tbt/tramelblaze/alu_opQ_0" BEL
+        "tbt/tramelblaze/flag_selQ_2" BEL "tbt/tramelblaze/flag_selQ_1" BEL
+        "tbt/tramelblaze/flag_selQ_0" BEL "tbt/tramelblaze/disintQ" BEL
+        "tbt/tramelblaze/pushQ" BEL "tbt/tramelblaze/int_enable" BEL
+        "tbt/tramelblaze/ldflagPQ" BEL "tbt/tramelblaze/const_reg_15" BEL
+        "tbt/tramelblaze/const_reg_14" BEL "tbt/tramelblaze/const_reg_13" BEL
+        "tbt/tramelblaze/const_reg_12" BEL "tbt/tramelblaze/const_reg_11" BEL
+        "tbt/tramelblaze/const_reg_10" BEL "tbt/tramelblaze/const_reg_9" BEL
+        "tbt/tramelblaze/const_reg_8" BEL "tbt/tramelblaze/const_reg_7" BEL
+        "tbt/tramelblaze/const_reg_6" BEL "tbt/tramelblaze/const_reg_5" BEL
+        "tbt/tramelblaze/const_reg_4" BEL "tbt/tramelblaze/const_reg_3" BEL
+        "tbt/tramelblaze/const_reg_2" BEL "tbt/tramelblaze/const_reg_1" BEL
+        "tbt/tramelblaze/const_reg_0" BEL "tbt/tramelblaze/enableoutportQ" BEL
+        "tbt/tramelblaze/enintQ" BEL "tbt/tramelblaze/popQ" BEL
+        "tbt/tramelblaze/sel_alubQ" BEL "tbt/tramelblaze/wtsrQ" BEL
+        "tbt/tramelblaze/wtrfQ" BEL "tbt/tramelblaze/loadKQ" BEL
+        "tbt/tramelblaze/ldflagQ" BEL "tbt/tramelblaze/int_proc" BEL
+        "tbt/tramelblaze/alu_out_reg_16" BEL "tbt/tramelblaze/alu_out_reg_15"
+        BEL "tbt/tramelblaze/alu_out_reg_14" BEL
+        "tbt/tramelblaze/alu_out_reg_13" BEL "tbt/tramelblaze/alu_out_reg_12"
+        BEL "tbt/tramelblaze/alu_out_reg_11" BEL
+        "tbt/tramelblaze/alu_out_reg_10" BEL "tbt/tramelblaze/alu_out_reg_9"
+        BEL "tbt/tramelblaze/alu_out_reg_8" BEL
+        "tbt/tramelblaze/alu_out_reg_7" BEL "tbt/tramelblaze/alu_out_reg_6"
+        BEL "tbt/tramelblaze/alu_out_reg_5" BEL
+        "tbt/tramelblaze/alu_out_reg_4" BEL "tbt/tramelblaze/alu_out_reg_3"
+        BEL "tbt/tramelblaze/alu_out_reg_2" BEL
+        "tbt/tramelblaze/alu_out_reg_1" BEL "tbt/tramelblaze/alu_out_reg_0"
+        BEL "clk_BUFGP/BUFG" PIN
+        "tbt/tramelblaze/sr/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>"
+        PIN
+        "tbt/tramelblaze/sr/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>"
+        PIN
+        "tbt/tramelblaze/stkr/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<32>"
+        PIN
+        "tbt/tramelblaze/stkr/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.WIDE_PRIM18.ram_pins<33>"
+        PIN
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>"
+        PIN
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>"
+        PIN
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>"
+        PIN
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>"
+        PIN
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>"
+        PIN
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>"
+        PIN
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>"
+        PIN
+        "tbt/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

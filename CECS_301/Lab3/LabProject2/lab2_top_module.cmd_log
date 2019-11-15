@@ -1,0 +1,78 @@
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-csg324-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab2_top_module_map.ncd lab2_top_module.ncd lab2_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab2_top_module.twx lab2_top_module.ncd -o lab2_top_module.twr lab2_top_module.pcf -ucf lab2.ucf 
+bitgen -intstyle ise -f lab2_top_module.ut lab2_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-fgg484-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-fgg484-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-fgg484-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-fgg484-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-fgg484-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-fgg484-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-fgg484-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-fgg484-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-csg324-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab2_top_module_map.ncd lab2_top_module.ncd lab2_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab2_top_module.twx lab2_top_module.ncd -o lab2_top_module.twr lab2_top_module.pcf -ucf lab2.ucf 
+bitgen -intstyle ise -f lab2_top_module.ut lab2_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab2/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab2/LabProject2/lab2_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-csg324-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab2_top_module_map.ncd lab2_top_module.ncd lab2_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab2_top_module.twx lab2_top_module.ncd -o lab2_top_module.twr lab2_top_module.pcf -ucf lab2.ucf 
+bitgen -intstyle ise -f lab2_top_module.ut lab2_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab3/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab3/LabProject2/lab2_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-csg324-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab2_top_module_map.ncd lab2_top_module.ncd lab2_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab2_top_module.twx lab2_top_module.ncd -o lab2_top_module.twr lab2_top_module.pcf -ucf lab2.ucf 
+bitgen -intstyle ise -f lab2_top_module.ut lab2_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab3/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab3/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab3/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab3/LabProject2/lab2_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-csg324-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab2_top_module_map.ncd lab2_top_module.ncd lab2_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab2_top_module.twx lab2_top_module.ncd -o lab2_top_module.twr lab2_top_module.pcf -ucf lab2.ucf 
+bitgen -intstyle ise -f lab2_top_module.ut lab2_top_module.ncd 
+xst -intstyle ise -ifn "D:/301/Lab3/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab3/LabProject2/lab2_top_module.syr" 
+xst -intstyle ise -ifn "D:/301/Lab3/LabProject2/lab2_top_module.xst" -ofn "D:/301/Lab3/LabProject2/lab2_top_module.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc lab2.ucf -p xc7a100t-csg324-3 lab2_top_module.ngc lab2_top_module.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o lab2_top_module_map.ncd lab2_top_module.ngd lab2_top_module.pcf 
+par -w -intstyle ise -ol high -mt off lab2_top_module_map.ncd lab2_top_module.ncd lab2_top_module.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml lab2_top_module.twx lab2_top_module.ncd -o lab2_top_module.twr lab2_top_module.pcf -ucf lab2.ucf 
+bitgen -intstyle ise -f lab2_top_module.ut lab2_top_module.ncd 

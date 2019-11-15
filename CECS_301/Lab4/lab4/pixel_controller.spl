@@ -1,0 +1,17 @@
+[Inputs]
+clk
+reset
+[Outputs]
+an7
+an6
+an5
+an4
+an3
+an2
+an1
+an0
+=sel[2:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel pixel_controller
+

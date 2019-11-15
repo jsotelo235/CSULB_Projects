@@ -1,0 +1,2 @@
+vhdtdtfi -lib work {D:/301/Lab8 RISC Processor/Lab_8/CU.v} -lang verilog -prj Lab_8 -o CU.spl -module CU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 CU.spl {D:/301/Lab8 RISC Processor/Lab_8/CU.sym} 

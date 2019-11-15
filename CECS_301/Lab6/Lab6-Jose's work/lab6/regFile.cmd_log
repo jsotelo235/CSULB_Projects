@@ -1,0 +1,6 @@
+vhdtdtfi -lib work D:/301/Lab6/lab6/regFile.v -lang verilog -prj lab6 -o regFile.spl -module regFile -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 regFile.spl D:/301/Lab6/lab6/regFile.sym 
+vhdtdtfi -lib work D:/301/Lab6/lab6/regFile.v -lang verilog -prj lab6 -o regFile.spl -module regFile -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 regFile.spl D:/301/Lab6/lab6/regFile.sym 
+vhdtdtfi -lib work D:/301/Lab6/lab6/regFile.v -lang verilog -prj lab6 -o regFile.spl -module regFile -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 regFile.spl D:/301/Lab6/lab6/regFile.sym 

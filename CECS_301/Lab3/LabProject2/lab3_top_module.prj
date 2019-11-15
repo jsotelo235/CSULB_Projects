@@ -1,0 +1,6 @@
+verilog work "d_flip_flop.v"
+verilog work "sequence_detector_101101.v"
+verilog work "one_shot.v"
+verilog work "hex_to_7segment.v"
+verilog work "clk_div.v"
+verilog work "lab3_top_module.v"
